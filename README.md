@@ -1,6 +1,6 @@
 # mycode123123
 
-<script>alert();</script>
+<script>alert('威风');</script>
 
 
 
