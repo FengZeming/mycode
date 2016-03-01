@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<style type="text/css">
+		.countdown {
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			margin-left: -300px;
+			width: auto;
+			min-width: 600px;
+			height: 100px;
+			line-height: 100px;
+			padding: 0 30px;
+			background: #000;
+			border-radius: 5px;
+			color: #fff;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+		}
+		
+		span {
+			display: inline-block;
+		}
+		
+		.lucency {
+			padding: 0 10px;
+			height: 50px;
+			line-height: 50px;
+			background: rgba(255, 255, 255, 0.9) !important;
+			filter: Alpha(opacity=90);
+			background: #fff;
+			color: #000;
+			border-radius: 2px;
+		}
+		
+		.lucency i {
+			position: relative;
+			font-style: normal;
+			font-size: 25px;
+		}
+	</style>
+
+	<body>
+
+		<div class="countdown">
+			<span>距离</span>
+			<span class="due">
+				
+			</span>
+			<span>还有</span>
+			<span class="lucency ">
+				<i class="day">00</i>
+			</span>
+			<span>天</span>
+			<span class="lucency ">
+				<i class="hour">00</i>
+			</span>
+			<span>小时</span>
+
+			<span class="lucency ">
+			<i class="minute">00</i>
+			</span>
+			<span>分钟</span>
+			<span class="lucency ">
+				<i class="second">00</i>
+			</span>
+			<span>秒</span>
+		</div>
+
+		<script type="text/javascript">
+			var tools = {
+				calculate: function() { //时区差+北京时间
+					var cDate = new Date();
+					var nDifftime = (this.nDate.getTime() - cDate.getTime() + this.nDate.getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000) / 1000;
+					if (nDifftime <= 0) {
+						clearInterval(this.clear);
+						this.end();
+						return;
+					}
+					var d = Math.floor((nDifftime / (24 * 3600)));
+					var h = Math.floor(nDifftime / 3600 % 24);
+					var m = Math.floor(nDifftime / 60 % 60);
+					var s = Math.floor(nDifftime % 60);
+					this.oDay.innerHTML = this.completion(d);
+					this.oHour.innerHTML = this.completion(h);
+					this.oMinute.innerHTML = this.completion(m);
+					this.oSecond.innerHTML = this.completion(s);
+				},
+				due: function() {
+					var d = this.nDate;
+					this.oDue.innerHTML = d.getFullYear() + '年 ' + (d.getMonth() + 1) + '月 ' + d.getDate() + '日 ' + d.getHours() + '时 ' + d.getMinutes() + '分 ' + d.getSeconds() + '秒 ';
+				},
+				completion: function(num) {
+					return num > 9 ? num : '0' + num;
+				},
+				end: function() {
+					this.oCountdown = document.getElementsByClassName('countdown')[0];
+					this.oCountdown.innerHTML = '倒计时结束！过年咯！！！';
+				},
+				execute: function(str) {
+					var t = this;
+					t.nDate = new Date(str);
+					t.oDay = document.getElementsByClassName('day')[0];
+					t.oHour = document.getElementsByClassName('hour')[0];
+					t.oMinute = document.getElementsByClassName('minute')[0];
+					t.oSecond = document.getElementsByClassName('second')[0];
+					t.oDue = document.getElementsByClassName('due')[0];
+					t.due();
+					t.clear = setInterval(function() {
+						t.calculate();
+					}, 1000);
+				}
+			};
+			 tools.execute('2016-2-8 23:59:59');
+			
+		</script>
+
+	</body>
+
+</html>
