@@ -58,7 +58,7 @@ function getLevel(len) {
 //获取组织好的数据
 function getData(filename, index, type) {
 	var type = type || 'f';
-	return getLevel(index) + '* ' + '[' + filename + '](.' + nPath.sep + arry.join(nPath.sep) + (type === 'd' ? '' : nPath.sep + filename) + ')\n';
+	return getLevel(index) + '* ' + '[' + filename + '](../' + arry.join('/') + (type === 'd' ? '' : '/' + filename) + ')\n';
 }
 
 
