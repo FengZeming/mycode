@@ -3,13 +3,12 @@
 
 
 
-
-&lt;script src="//cdn.bootcss.com/jquery/1.12.1/jquery.min.js" &gt;&lt;/script&gt;
-&lt;script&gt; 
+<script src='//cdn.bootcss.com/jquery/1.12.1/jquery.min.js'></script>
+<script>
 $(function(){
 alert(123);
 });
-&lt;/script&gt;
+</script>
 
 
 
