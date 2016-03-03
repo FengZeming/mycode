@@ -8,7 +8,7 @@
 	var oTree, aLi;
 	$(function() {
 	oTree = $('.summary');
-	aLi = oTree.find('li[data-level!="0"]');
+	aLi = oTree.find('.chapter[data-level!="0"]');
 	aLi.css('background-color','red');
 	});
 	console.log(aLi);
