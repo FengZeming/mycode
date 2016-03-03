@@ -5,10 +5,13 @@
 
 <script src='./jq.js'></script>
 <script>
-$(function(){
-alert(123);
-});
+	var oTree, aLi;
+	$(function() {
+	oTree = $('.summary');
+	aLi = oTree.find('li[data-level!="0"]');
+	aLi.css('background-color','red');
+	});
+	console.log(aLi);
 </script>
-
 
 
