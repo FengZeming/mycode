@@ -1,17 +1,23 @@
-# mycode123123
+### 微风香水作品集
+- 左边导航使用nodejs动态创建
+- js + css3 样式结构
 
 
-
-
-<script src='./jq.js'></script>
+<link rel="stylesheet" type="text/css" href="./css/tree.css"/>
 <script>
-	var oTree, aLi;
-	$(function() {
-	oTree = $('.summary');
-	aLi = oTree.find('.chapter[data-level!="0"]');
-	aLi.css('background-color','red');
+var oParent =  document.querySelector('.summary');
+var aLi = oParent.querySelectorAll('.chapter');
+	for (var i = 0; i < aLi.length; i++) {
+		 var oInput = document.createElement('input');
+			 oInput.type = 'checkbox';
+		 aLi[i].insertBefore(oInput,aLi[i].querySelector('span'));
+	}
+	oParent.addEventListener('click',function (e) {
+		if(e.target.tagName.toLocaleLowerCase()==='a'){
+			e.stopPropagation(),e.preventDefault();
+			window.open(e.target.getAttribute('href'));
+		}
 	});
-	console.log(aLi);
 </script>
 
 

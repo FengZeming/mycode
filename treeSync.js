@@ -4,6 +4,7 @@ var arry = [];
 var index = 0;
 var mdName = 'SUMMARY.md';
 var aExclude = ['jq.js', 'README.md', 'tree.js', 'treeSync.js'];
+var aDExclude = ['_book'];
 var rPath = '';
 
 //调用方法
@@ -29,7 +30,7 @@ function createData(path) {
 			arry = [];
 		}
 		//如果文件是文件夹
-		if (stat.isDirectory()) {
+		if (stat.isDirectory() && aDExclude.indexOf(filename) === -1) {
 			!arry[index - 1] ? arry.push(filename) : arry[index - 1] = filename;
 			//写入文件
 			writeData(filename, index, 'd');
@@ -37,7 +38,7 @@ function createData(path) {
 			createData(nPath.join(path, filename));
 		}
 		if (stat.isFile() && aExclude.indexOf(filename) === -1) {
-			writeData(filename, index);
+			writeData(filename, index + 1);
 		}
 	});
 }

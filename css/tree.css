@@ -1,0 +1,81 @@
+@charset "utf-8";
+.book .book-summary ul.summary {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.book .book-summary ul.summary li input {
+	position: absolute;
+	margin-left: 16px;
+	margin-top: 6px;
+	opacity: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.book .book-summary ul.summary li span {
+	cursor: default;
+	opacity: 1;
+	padding: 5px 15px;
+}
+
+.book .book-summary ul.summary li a {
+	padding: 5px 15px;
+	outline:none;
+}
+
+.book .book-summary ul.summary li span,
+.book .book-summary ul.summary li span::before {
+	cursor: default;
+}
+
+.book .book-summary ul.summary li span>b,
+.book .book-summary ul.summary li a b,
+.book .book-summary ul.summary li span::before {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	vertical-align: bottom;
+	background: url(icons.png) no-repeat;
+}
+
+.book .book-summary ul.summary li span>b,
+.book .book-summary ul.summary li a b {
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+.book .book-summary ul.summary li span::before {
+	content: "";
+	background-position: 0 -64px;
+}
+
+.book .book-summary ul.summary li a b {
+	background-position: 0 -32px;
+}
+
+
+/*树的隐藏显示*/
+
+.book .book-summary ul.summary li input ~ ul {
+	display: none;
+}
+
+.book .book-summary ul.summary li span input:disabled + span {
+	cursor: default;
+	opacity: .6;
+}
+
+.book .book-summary ul.summary li input:checked:not(:disabled) ~ ul {
+	display: block;
+}
+
+.book .book-summary ul.summary li input:checked + span::before {
+	background-position: 0 -48px;
+}
+
+.book .book-summary ul.summary li input:checked + span>b {
+	background-position: 0 -16px;
+}
