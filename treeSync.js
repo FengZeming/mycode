@@ -6,10 +6,8 @@ var mdName = 'SUMMARY.md';
 var aExclude = ['jq.js', 'README.md', 'tree.js', 'treeSync.js'];
 var rPath = '';
 
-
 //调用方法
 main();
-
 
 //主方法
 function main() {
@@ -32,11 +30,7 @@ function createData(path) {
 		}
 		//如果文件是文件夹
 		if (stat.isDirectory()) {
-			if (!arry[index - 1]) {
-				arry.push(filename);
-			} else {
-				arry[index - 1] = filename;
-			}
+			!arry[index - 1] ? arry.push(filename) : arry[index - 1] = filename;
 			//写入文件
 			writeData(filename, index, 'd');
 			//递归
