@@ -4,7 +4,7 @@ var arry = [];
 var index = 0;
 var mdName = 'SUMMARY.md';
 var aExclude = ['jq.js', 'README.md', 'tree.js', 'treeSync.js'];
-var aDExclude = ['_book'];
+var aDExclude = ['_book','css','js'];
 var rPath = '';
 
 //调用方法

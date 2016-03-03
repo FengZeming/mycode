@@ -1,7 +1,3 @@
- * [css](./css)
-   * [icons.png](./css/icons.png)
-   * [tree.css](./css/tree.css)
- * [js](./js)
  * [js小练习](./js小练习)
   * [2016猴年倒计时](./js小练习/2016猴年倒计时)
     * [index.html](./js小练习/2016猴年倒计时/index.html)
