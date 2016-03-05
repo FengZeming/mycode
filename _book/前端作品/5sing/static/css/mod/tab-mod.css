@@ -1,0 +1,10 @@
+@charset "utf-8";
+/*选项卡模块*/
+.m-tab{margin-top: 30px;background-color: #fff;}
+.m-tab-title-col{border-bottom: 2px solid #61697d;}
+.m-tab-list{height: 28px;line-height: 28px;}
+.m-tab-list li{float: left;/*width:33.3%;*/padding: 0 25px;text-align: center;cursor: pointer;}
+.m-tab-list li a{display: block; font-weight: normal;}
+.m-tab-list li.curr{background-color:#61697d;}
+.m-tab-list li.curr a{color: #fff;}
+.m-tab-content-col{padding: 0 15px;}

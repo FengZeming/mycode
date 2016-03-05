@@ -1,0 +1,7 @@
+{{each $data as item i}}
+<ul class="jc-tab-list am-list p-reco-list {{if i===0}}current{{/if}}">
+	{{each item as o j }}
+	<li><a class="ell" href="{{o.href}}"><i>·</i><em>【<s>{{o.type}}</s>】</em>{{o.title}}</a></li>
+	{{/each}}
+</ul>
+{{/each}}

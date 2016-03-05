@@ -1,0 +1,24 @@
+@charset "utf-8";
+/*头部模块*/
+.p-header-box{top: 0;left: 0;width: 100%;}
+.p-header-box a{color: #fff;}
+.p-header-box a:hover{color: #66CC00;font-weight: normal;text-decoration: none;}
+.m-hd-col{min-width: 1000px;padding: 10px 0;background: #3C3C46;}
+.m-hd-logo{line-height: 0;}
+.m-hd-se{margin: 5px 0 5px 40px;padding: 0 0 0 15px;background-color: #fff;border-radius: 16px;}
+.m-hd-seipt{width: 145px;height: 28px;line-height: 28px;border: 0;outline: none;}
+.m-hd-sebtn{width: 40px;top: 3px;margin-left: 5px;border-left: 1px solid #C2C2C2;}
+.m-hd-nav li{float: left;line-height: 40px;padding: 0 12px;}
+.m-hd-nav li:hover span{display: block;}
+.m-hd-nav span{ float: none;  background-color: #fff; border: 1px solid #ddd;  font-size: 12px;text-align: center;}
+.m-hd-nav span a{display: block;padding: 0 10px;  line-height: 30px; color: #3c3c46; }
+.m-hd-nav span a:hover{color: #3c3c46;background: #f1f1f1;}
+.m-hd-up,
+.m-hd-app{top: 1px;margin-right: 10px;}
+.m-hd-app{top: 3px;}
+/*菜单*/
+.m-hd-nav-col{height: 40px;line-height: 40px;background-color: #4C4C53;}
+.m-hd-navlist li{float: left;height: 36px;border-bottom: 4px solid transparent;}
+.m-hd-navlist a{padding: 0 20px;font-size: 14px;}
+.m-hd-navlist li.curr{border-bottom: 4px solid #66CC00;}
+.m-hd-navlist li.split{padding: 0 12px;color: #fff;}

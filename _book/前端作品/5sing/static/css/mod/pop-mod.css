@@ -1,0 +1,10 @@
+@charset "utf-8";
+/** * 人气模块 */
+.m-pop{margin-top: 30px;padding: 15px 20px;background-color: #fff;border: 1px solid #ebebeb;}
+.m-pop-title-col{line-height: 30px;}
+.m-pop-title{margin-left: 37px;color: #66cc00;}
+.m-pop-title > i{position: absolute;margin-left: -37px;}
+.m-pop-content-col{margin-top: 12px;}
+.m-pop-title-col .i-hot{background-position: -60px 0;}
+.m-pop-title-col .i-live{background-position: -90px 0;}
+.m-pop-title-col .i-cover{background-position: -30px 0;}
