@@ -21,9 +21,17 @@
 }
 
 .book .book-summary ul.summary li a {
-	padding: 5px 15px;
+	display: inline-block;
+	padding: 5px 0;
+	margin-left: 15px;
 	outline:none;
 }
+.book .book-summary ul.summary li a.modify {
+	margin-left: 19px;
+}
+
+
+
 
 .book .book-summary ul.summary li span,
 .book .book-summary ul.summary li span::before {
@@ -38,7 +46,7 @@
 	height: 16px;
 	line-height: 16px;
 	vertical-align: bottom;
-	background: url(icons.png) no-repeat;
+	background: url(icons.fw.png) no-repeat;
 }
 
 .book .book-summary ul.summary li span>b,

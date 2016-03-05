@@ -1,0 +1,22 @@
+{{each $data as item i}} 
+<div class="jc-tab-item  {{if i!==0}}dn{{/if}}">
+	{{each item as list j}}
+	<ul class="jc-tab-list p-audi-list am-list {{if j===0}}current{{/if}} ">
+		{{each list as o k}}
+		<li>
+			<span class="dib ell p-audi-pic">
+			<img src="{{o.url}}" width="40" height="40" />
+		</span>
+			<span class="dib p-audi-attr">
+			<a class="db b" href="#">{{o.title}}</a>
+			<span class="ovh"><a class="fl ell g9" href="#">{{o.name}}</a><em class="fr g9"><s class="b">{{o.pop}}</s><s>&nbsp;次播放</s></em></span>
+			</span>
+			<span class="rel dib p-audi-btn">
+			<a class="bgi-nav btn i-song" href="#">试听</a>
+		</span>
+		</li>
+		{{/each}}
+	</ul>
+	{{/each}}
+</div>
+{{/each}}

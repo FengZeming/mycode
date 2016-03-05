@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*============banner开始==============*/
+.p-banner-box{height: 250px;margin: 100px auto 0 auto;background: #4D3879 url(img/banner_bg.jpg) no-repeat center;}
+/*推荐资讯*/
+.p-reco-col{width: 272px;height: 232px;padding-top: 18px;padding-left: 18px;font-family: Arial, Helvetica, sans-serif;background: #4D3879 url(img/news_bg.jpg) no-repeat center;}
+.p-reco-title{width: 105px;height: 26px;margin-bottom: 5px;background-position: 0 -34px;}
+.p-reco-content{width: 250px; height: 200px;}
+.p-reco-list{width: 100%;}
+.p-reco-list li{border-bottom: 1px dashed #6C627C;}
+.p-reco-list a{display: block;line-height: 34px;color: #fff;}
+.p-reco-list a:hover{text-decoration: none;}
+.p-reco-list i{padding-right: 12px;vertical-align: -2px;}
+/*============banner结束==============*/
+/*============内容开始==============*/
+/*热门音乐人*/
+.p-hot-alone-col{width: 210px;}
+.p-hot-alone-pic{line-height: 0;}
+.p-hot-val{bottom:0;left: 0; width: 100%;height:0;line-height: 30px; font-size: 12px; text-align: left;text-indent:10px;}
+.p-hot-val i{top: 6px;  right: 8px; cursor: pointer;}
+.p-hot-val.alone{ line-height: 36px;text-align: center;text-indent:0;}
+.p-hot-val.alone i{top: 8px;}
+.p-hot-alone-name{margin-top: 6px;line-height: 30px;}
+.p-hot-alone-fame{border-top: 1px solid #F7F7F7;}
+.p-hot-list-col{width: 700px;height: 330px;padding-left: 5px;}
+.p-hot-list-col li{position: relative;float: left;margin: 0 0 30px 20px;}
+.p-hot-list-col li > a{ display: block;width: 120px;height: 120px;font-size: 0;}
+.p-hot-list-col h4{line-height: 22px;margin: 0;font-weight: normal;text-align: center;background-color: #F5F5F5;}
+/*音乐现场*/
+.p-live{float: left;width: 210px;margin-left: 23px;background-color: #F8F8F8;}
+.p-live:hover  .p-live-val{display: block;}
+.p-live dt{line-height: 0;}
+.p-live dd{line-height: 24px;padding: 0 12px;}
+.p-live .i-play{top: 2px;right: 5px;}
+.p-live .i-crowd{top: 1px;margin-right: 10px;}
+.p-live-val{top: 0;left: 0; width: 100%;line-height: 140px; text-align: center; }
+/*推荐*/
+.p-song-col{height: 400px;}
+.p-song{padding-top: 10px;padding-bottom: 9px;overflow: hidden;border-bottom: 1px solid #f5f5f5;}
+.p-song:hover{background-color: #f5f5f5;}
+.p-song:hover .p-song-name a{color: #3c3c46;font-weight: bold;}
+.p-song dt,
+.p-song dd{float: left;color: #999;}
+.p-song dd a{color: #999;}
+.p-song dd a:hover{font-weight: normal;}
+.p-song-name{width: 230px;margin-right: 65px;padding-left: 10px;}
+.p-song-artist{width: 132px;margin: 0 5px;}
+.p-song-pop{width: 100px;margin: 0 5px;text-align: right;}
+.p-song-btn{width: 53px;text-align: center;}
+/*好歌抢先听*/
+.p-audi-col{height: 850px; padding-left: 12px;border-left: 3px solid #e3e3e3;}
+.p-audi-title{height: 58px;background-position: 0 -63px;}
+.p-audi-title .m-tab-list{line-height: 22px;margin-top: 36px;}
+.p-audi-title li{width: 33.3%;padding: 0;}
+.p-audi-title .m-more-play{top: 9px;}
+.p-audi-list{width: 100%;}
+.p-audi-list li{height: 45px;padding: 19px 0 20px 0; border-bottom: 1px solid #f7f7f7;}
+.p-audi-list li.wh55{height: 55px;padding: 10px 0 10px 0;}
+.p-audi-pic{width: 44px;line-height: 45px;font-size: 0;}
+.p-audi-list li.wh55 .p-audi-pic{width: 55px;line-height: 55px;}
+.p-audi-list li.wh55:hover{background-color: #f5f5f5;border-bottom-color: #EBEBEB;}
+.p-audi-attr{width: 177px;vertical-align: top;}
+.p-audi-attr > a{}
+.p-audi-attr > span{line-height: 24px;}
+.p-audi-attr > span a{width: 88px;}
+.p-audi-attr > span a:hover{color: #999;font-weight: normal;}
+.p-audi-attr s{text-decoration: none;}
+.p-audi-btn{top: 9px;left: 7px;width: 30px;text-align: center;vertical-align: top;}
+.p-audi-pg{ line-height: 37px;}
+/*歌单与分享*/
+.p-album-col{height: 356px;}
+.p-album{}
+.p-album li{position: relative;float: left;width: 126px;}
+.p-album li:hover .p-ablum-lsen{display: block;}
+.p-album li:hover .p-ablum-value{display: none;}
+.p-ablum-pic{width: 111px;height: 120px;}
+.p-ablum-bg{width: 126px;height: 120px;background: url(img/album_bg.png) no-repeat;}
+.p-ablum-bg.bg-disc{background-position:0 -120px;} 
+.p-ablum-lsen{width: 111px;line-height: 111px;text-align: center;}
+.p-ablum-value{bottom: 9px;width: 111px;height: 24px;line-height: 26px;text-align: left;border-radius: 0 0 8px 8px;}
+.p-ablum-value .i-pop{margin: 0 12px;}
+.p-ablum-des{width: 111px;}
+/*分享与传播*/
+.p-spread-col{height: 380px;}
+/*============内容结束==============*/

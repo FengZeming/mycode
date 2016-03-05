@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*脚部模块*/
+.p-footer-box{ }
+.m-ft-service{min-width: 960px; height: 125px;margin-top: 30px;padding-top: 20px;background-color: #fff;}
+.m-ft-service h2{line-height: 30px;vertical-align: bottom;}
+.m-ft-service dl{float: left;}
+.m-ft-service dt{padding-bottom: 25px;}
+.m-ft-service li{float: left;line-height: 20px;margin-right: 14px;}
+.m-ft-service a{color: #999;}
+.m-ft-service a:hover{color: #ee0000;font-weight: normal;}
+.m-ft-nav{width: 192px;}
+.m-ft-partner{width: 390px;margin: 0 10px;}
+.m-ft-partner a{margin: 0 2px;}
+.m-ft-topic{width: 358px;}
+.m-ft-topic li{width: 179px;margin: 0;}
+.m-ft-copyright{min-width: 1000px; height: 85px;background-color: #333;line-height: 22px;}
+.m-ft-copyright a:hover{color: #4caff4;font-weight: normal;}

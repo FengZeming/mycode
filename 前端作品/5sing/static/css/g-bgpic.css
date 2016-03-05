@@ -1,0 +1,46 @@
+@charset "utf-8";
+/*================公共-背景图 ======================*/
+.bgi{background: url(img/indexsprite.png) no-repeat;}
+.bgi-nav{background: url(img/index_nav_icon_new.png) no-repeat;}
+.bgi-cont{background: url(img/index_cont_icon.png) no-repeat;}
+.bgi-logo{background: url(img/bom_logo.png) no-repeat;}
+.bgi-flmenu{background: url(img/flot_menu.png) no-repeat;}
+/*================公共-图标按钮 ======================*/
+.i-se{width: 16px;height: 16px;background-position: 10px -147px;}
+.i-up{width: 16px;height: 14px;background-position: 0 -53px;}
+.i-app{width: 9px;height: 16px;background-position: 0 -67px;}
+.i-prev{margin-right: 4px;background-position: -33px -56px;}
+.i-next{margin-left: 4px;background-position: -48px -56px;}
+.i-prev-prt:hover .i-prev, .i-prev:hover{background-position: -33px -72px;}
+.i-next-prt:hover .i-next, .i-next:hover{background-position: -48px -72px;}
+.i-prevb{margin-right: 4px;background-position: 0 -56px;}
+.i-nextb{margin-left: 4px;background-position: -16px -56px;}
+.i-prevb-prt:hover .i-prevb, .i-prevb:hover{background-position: 0 -72px;}
+.i-nextb-prt:hover .i-nextb, .i-nextb:hover{background-position: -16px -72px;}
+.i-play{width: 14px;height: 15px;background: url(img/play_icon-v1.0.1.png) no-repeat;}
+.i-crowd{width: 17px;height: 13px;background-position: -34px -67px;}
+.i-song{width: 20px;height: 20px;background-position: -84px -36px;}
+.i-song:hover{background-position: -64px -36px;}
+.i-lsen{background-position: -104px -36px;}
+.i-lsen:hover{background-position: -104px -56px;}
+.i-pop{width: 18px;height: 13px;background-position: -210px 0;}
+/*bgi-s*/
+.i-scene{width: 47px;height: 47px; background-position: -35px -80px;}
+/*bgi-e*/
+/*big-logo-s*/
+.i-flogo{width: 63px;height: 30px;background-position: -360px 0;}
+.i-kugou{width: 90px;height: 40px;}
+.i-kugou:hover{background-position: 0 -40px;}
+.i-lexiang{width: 90px;height: 40px;background-position: -90px 0;}
+.i-lexiang:hover{background-position: -90px -40px;}
+.i-aiyy{width: 90px;height: 40px;background-position: -180px 0;}
+.i-aiyy:hover{background-position: -180px -40px;}
+.i-woyy{width: 90px;height: 40px;background-position: -270px 0;}
+.i-woyy:hover{background-position: -270px -40px;}
+/*big-logo-e*/
+.mark{position: absolute;width: 40px;height: 20px;line-height: 20px;top: 10px;right: 0;text-align: center;color: #fff;}
+.mark.review{background-color: #66cc00;}
+.mark.live{background: url(img/live-hot.gif) no-repeat;}
+
+
+

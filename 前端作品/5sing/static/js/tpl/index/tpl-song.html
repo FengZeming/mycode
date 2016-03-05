@@ -1,0 +1,12 @@
+{{each $data as item i}}
+<div class="jc-tab-list am-list {{if i===0}}current{{/if}}">
+	{{each item as o j}}
+	<dl class="p-song">
+		<dt class="p-song-name ell "><a href="#" title="{{o.title}}">{{o.title}}</a></dt>
+		<dd class="p-song-artist ell"><a href="#"  title="{{o.name}}">{{o.name}}</a></dd>
+		<dd class="p-song-pop"><span class="b">{{o.pop}}</span>&nbsp;次播放</dd>
+		<dd class="p-song-btn"><a class="bgi-nav btn i-song" href="#">试听</a></dd>
+	</dl>
+	{{/each}}
+</div>
+{{/each}}

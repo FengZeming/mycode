@@ -1,0 +1,20 @@
+@charset "utf-8";
+/*支持浏览器*/
+.llq {
+	position: fixed;
+	left: 10px;
+	bottom: 10px;
+}
+.llq li {
+	width: 62px;
+	height: 81px;
+	background: url(llq.png) no-repeat;
+}
+
+.llq li.llq-ie8 {
+	background-position: -248px 0;
+}
+
+.llq li.llq-firefox {
+	background-position: -62px 0;
+}

@@ -1,70 +1,83 @@
+/**
+ * 遍历当前文件夹下所有文件，生成summary.md
+ * 过滤  开头 = ^. ||  ^_ 
+ * 过滤  结尾 = .md$
+ * 文件
+ * 通过遍历文件生成带有层级的json数据最后写入summary.md
+ */
 var nPath = require('path');
 var nFs = require('fs');
-var arry = [];
-var index = 0;
 var mdName = 'SUMMARY.md';
-var aExclude = ['jq.js', 'README.md', 'tree.js', 'treeSync.js'];
-var aDExclude = ['_book','css','js'];
-var rPath = '';
-
+var data = [];
 //调用方法
 main();
 
 //主方法
 function main() {
 	nFs.existsSync(mdName) && nFs.unlinkSync(mdName);
-	createData();
+	eachData(getJson());
+	writeData(data.join(''));
+	//console.log(JSON.stringify(getJson(),undefined,1));
+	
 }
-//创建数据
-function createData(path) {
-	var path = path || (arry = [], __dirname);
-	var files = nFs.readdirSync(path); //同步读取文件
-	//遍历
-	files.forEach(function(filename) {
-		if (filename.charAt(0) === '.') return;
-		//同步读取文件信息
-		var stat = nFs.statSync(nPath.join(path, filename));
-		//文件层级 
-		index = path.substring(__dirname.length).split(nPath.sep).length;
-		if (index === 1) {
-			arry = [];
+//组织数据
+function eachData(json) {
+	if (json['name'] !== 'root') {
+		data.push(getData(json['name'], json['path']));
+	}
+	json['children'].forEach(function(chid) {
+		if (typeof chid === 'string') {
+			data.push(getData(chid, json['path'] + '/' + chid));
+			return;
 		}
-		//如果文件是文件夹
-		if (stat.isDirectory() && aDExclude.indexOf(filename) === -1) {
-			!arry[index - 1] ? arry.push(filename) : arry[index - 1] = filename;
-			//写入文件
-			writeData(filename, index, 'd');
-			//递归
-			createData(nPath.join(path, filename));
-		}
-		if (stat.isFile() && aExclude.indexOf(filename) === -1) {
-			writeData(filename, index + 1);
-		}
+		eachData(chid);
 	});
 }
+
+//创建数据
+function getJson(path, name) {
+	var name = name || 'root',
+		path = path || __dirname,
+		files = nFs.readdirSync(path),
+		o = {
+			name: name,
+			path: path.substring(__dirname.length).replace(/\\/g, '/')
+		};
+	o.children = files.map(function(filename) {
+		//去掉以. _ 开头 或 .md 为结尾的文件
+		if (/(^\.)|(^\_)|(\.md$)/.test(filename))return;
+		var stat = nFs.statSync(nPath.join(path, filename));
+		if (stat.isDirectory()) {
+			return getJson(nPath.join(path, filename), filename);
+		}
+		return filename;
+	}).filter(function(e) {
+		return e; //过滤null
+	}).sort(function(a, b) {
+		return /\.[a-z]+$/.test(a) - /\.[a-z]+$/.test(b); //将非目录的文件排序到最后
+	});
+	return o;
+}
+
 //层级字符串
-function getLevel(len) {
+function getLevel(index) {
 	var level = '';
-	for (var i = 0; i < len; i++) {
-		level += ' ';
+	for (var i = 0; i < index; i++) {
+		level += '  ';
 	}
 	return level;
 }
+
 //获取组织好的数据
-function getData(filename, index, type) {
-	var type = type || 'f';
-	return getLevel(index) + '* ' + '[' + filename + '](./' + arry.join('/') + (type === 'd' ? '' : '/' + filename) + ')\n';
+function getData(filename, path) {
+	var index = path.split('/').length;
+	return getLevel(index-1) + '* [' + filename + '](.' + path + ')\n';
 }
 
-
 //写入数据
-function writeData(filename, index, type) {
-	var data = getData(filename, index, type);
-	nFs.open(mdName, 'a', 0644, function(e, fd) {
-		if (e) throw e;
-		nFs.write(fd, data, 0, 'utf8', function(e) {
-			if (e) throw e;
-			nFs.closeSync(fd);
-		})
+function writeData(data) {
+	nFs.writeFileSync(mdName, data, {
+		encoding: 'utf8',
+		flag: 'a'
 	});
 }

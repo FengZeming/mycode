@@ -1,0 +1,16 @@
+@charset "utf-8";
+/** *图片轮换模块 */
+.m-slider-prev-btn,
+.m-slider-next-btn{z-index: 3; position: absolute;top: 50%;width: 30px;height: 60px;margin-top: -30px;background:rgba(0, 0, 0, 0.3);filter: progid:DXImageTransform.Microsoft.gradient(enabled = 'true',startColorstr = '#60000000',endColorstr = '#60000000');}
+.m-slider-prev-btn{left: 0;}
+.m-slider-next-btn{right: 0;}
+.m-slider-prev-btn .i-prev{position: absolute;top: 22px;left: 7px;}
+.m-slider-next-btn .i-next{position: absolute;top: 22px;right: 7px;}
+/*图片轮换*/
+.m-slider{position: relative;width: 650px;height: 220px;margin: 15px 0;text-align: center;}
+.m-slider-list{position: absolute; top:0;right: 0;bottom: 0;left: 0; width: 650px;height: 220px;}
+.m-slider-list li{float: left;}
+/*.m-slider-dot{position: absolute;left: 0;bottom: 10px;width: 100%;text-align: center;}*/
+.m-slider-dot { position: relative; display: inline-block;  top: 190px; line-height: 20px;padding-right:7px;border-radius: 4px;}
+.m-slider-dot li{display: inline-block;width: 8px;height: 8px;margin-left:7px; background-color: #fff;border-radius: 100%;cursor: pointer;}
+.m-slider-dot li.curr{background-color: #6C0;}

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>中国原创音乐基地 5SING</title>
+		<meta name="keywords" content="中国原创音乐基地，原创，伴奏，免费伴奏，原创音乐，翻唱，网络歌曲，手机铃声，翻唱音乐，手机彩铃，网络音乐，5sing" />
+		<meta name="description" content="中国原创音乐基地，数字音乐网站，汇集了大量的网络歌手的原创音乐歌曲及翻唱歌曲，提供大量歌曲的伴奏以及歌词免费下载，将喜爱的音乐或者歌曲作为手机彩铃下载" />
+		<link rel="stylesheet" type="text/css" href="../static/css/g-normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/g-bgpic.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/animation/flip-am.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/mod/header-mod.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/mod/slider-mod.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/mod/pop-mod.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/mod/more-mod.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/mod/tab-mod.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/mod/flmenu-mod.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/mod/footer-mod.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/g-reset.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/llq/llq.css" />
+		<!--
+    	作者：冯泽民
+    	技术：seajs+jquery+artTemplate
+    	兼容性：ie8~11 chrome最新 firefox最新
+    	描述：实际项目中会使用基于nodejs前端构建工具压缩合并css所以这里把页面的各个部分模块化
+    -->
+		<!--[if lt IE 10]>
+    	<style type="text/css">
+		.am-list{
+			position: relative !important;
+			display: none ;
+			opacity: 1 !important;
+		}
+		.am-list.current{
+			display:block ;
+			opacity: 1 !important;
+		}
+	</style>
+    <![endif]-->
+
+	</head>
+
+	<body>
+		<!--头部开始-->
+		<div class="p-header-box fix zx3">
+			<div class="m-hd-col">
+				<div class="lyt960 ovh">
+					<div class="m-hd-logo fl ">
+						<a href="#"><img src="../static/img/center_logo.png" alt="中国原创音乐基地" /></a>
+					</div>
+					<div class="m-hd-se fl ">
+						<input class="m-hd-seipt dib " type="text" name="search" placeholder="歌曲/歌单/会员" />
+						<a class="m-hd-sebtn rel dib bgi i-se " href="javascript:;"></a>
+					</div>
+					<ul class="m-hd-nav fr ovh f14 ">
+						<li><a href="javascript:;">登录</a></li>
+						<li><a href="javascript:;">注册</a></li>
+						<li>
+							<a href="javascript:;"><i class="m-hd-up rel dib bgi i-up "></i>上传</a>
+							<span class="abs zx2 dn">
+								<a href="#">上传原创</a>
+								<a href="#">上传翻唱</a>
+								<a href="#">上传伴奏</a>
+								<a href="#">歌曲管理</a>
+							</span>
+						</li>
+						<li>
+							<a href="javascript:;"><i class="m-hd-app rel dib bgi i-app "></i>APP</a>
+							<span class="abs zx2 dn lh0">
+								<img  src="../static/img/5singcode.png" width="100" height="100"/>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--菜单-->
+			<div class="m-hd-nav-col">
+				<div class="lyt960 ovh">
+					<ul class="m-hd-navlist fl ovh ">
+						<li class="curr"><a href="javascript:;">首页</a></li>
+						<li><a href="javascript:;">原创</a></li>
+						<li><a href="javascript:;">翻唱</a></li>
+						<li><a href="javascript:;">伴奏</a></li>
+						<li><a href="javascript:;">榜单</a></li>
+						<li><a href="javascript:;">歌单</a></li>
+						<li class="split">|</li>
+						<li><a href="javascript:;">音乐人</a></li>
+						<li><a href="javascript:;">活动</a></li>
+						<li><a href="javascript:;">圈子</a></li>
+						<li><a href="javascript:;">音乐现场</a></li>
+						<li><a href="javascript:;">众筹</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--头部结束-->
+
+		<!--banner开始-->
+		<div class="p-banner-box">
+			<div class="lyt960 ovh">
+				<!--图片轮换-s -->
+				<div id="js-slider" class="m-slider fl ovh">
+					<!--js动态生成-->
+				</div>
+				<!--图片轮换-e -->
+				<div id="js-reco-tab" class="p-reco-col fr">
+					<div class="ovh pr20">
+						<h2 class="p-reco-title fl bgi-cont btn">推荐资讯</h2>
+						<div class="fr">
+							<a class="jc-tab-btn jc-tab-prev bgi-nav btn  wh16 i-prev" href="javascript:;">上一页</a>
+							<a class="jc-tab-btn jc-tab-next bgi-nav btn  wh16 i-next" href="javascript:;">下一页</a>
+						</div>
+					</div>
+					<div class="jc-tab-content jc-tab-item p-reco-content am-flipY rel ovh">
+						<!--动态生成-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--banner结束-->
+
+		<!--内容开始-->
+		<div class="p-content-box">
+			<div class="lyt960">
+				<!--热门音乐人 start-->
+				<div class="m-pop pl15-20 mt30">
+					<div class="m-pop-title-col ovh">
+						<h2 class="m-pop-title fl"><i class="bgi-cont btn wh30 i-hot"></i>热门音乐人</h2>
+						<a class="m-more-def fr f14" href="#"><i class="bgi-nav btn wh16"></i>More</a>
+					</div>
+					<div id="js-hot" class="m-pop-content-col ovh">
+						<dl class="p-hot-alone-col fl ">
+							<dt class="p-hot-alone-pic rel ovh">
+									<a href="#"><img src="../web/img/hot-section/daren_210_210.jpg" width="210" height="210" alt="Keyee"/></a>
+							<em class="p-hot-val alone abs  gf opy" >播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+							</dt>
+							<dd class="p-hot-alone-name">
+								<strong><a class="g-ft14" href="#">=_=困白--smili</a></strong>
+							</dd>
+							<dd class="p-hot-alone-fame">歌手</dd>
+						</dl>
+						<div class="p-hot-list-col fl ">
+							<ul class="fl">
+								<li>
+									<span class="rel db ovh lh0">
+									<a href="#">
+										<img src="../web/img/hot-section/list_1_120_120.jpg" width="120" height="120" alt="作曲太平" />
+									</a>
+									<em class="p-hot-val abs gf opy">播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+									</span>
+									<h4><a href="#">作曲太平</a></h4>
+								</li>
+								<li>
+									<span class="rel db ovh lh0">
+									<a href="#">
+										<img src="../web/img/hot-section/list_2_120_120.jpg" width="120" height="120" alt="邓川瓶子" />
+									</a>
+									<em class="p-hot-val abs gf opy">播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+									</span>
+									<h4><a href="#">邓川瓶子</a></h4>
+								</li>
+								<li>
+									<span class="rel db ovh lh0">
+									<a href="#">
+										<img src="../web/img/hot-section/list_3_120_120.jpg" width="120" height="120" alt="Momily" />
+									</a>
+									<em class="p-hot-val abs gf opy">播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+									</span>
+									<h4><a href="#">Momily</a></h4>
+								</li>
+								<li>
+									<span class="rel db ovh lh0">
+									<a href="#"><img src="../web/img/hot-section/list_4_120_120.jpg" width="120" height="120" alt="—漂移先锋—" /></a>
+									<em class="p-hot-val abs gf opy">播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+									</span>
+									<h4><a href="#">—漂移先锋—</a></h4>
+								</li>
+								<li>
+									<span class="rel db ovh lh0">
+									<a href="#"><img src="../web/img/hot-section/list_5_120_120.jpg" width="120" height="120" alt="Erikaaaaaaa" /></a>
+									<em class="p-hot-val abs gf opy">播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+									</span>
+									<h4><a href="#">Erikaaaaaaa</a></h4>
+								</li>
+								<li>
+									<span class="rel db ovh lh0">
+									<a href="#"><img src="../web/img/hot-section/list_6_120_120.jpg" width="120" height="120" alt="骆俊宇" /></a>
+									<em class="p-hot-val abs gf opy">播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+									</span>
+									<h4><a href="#">骆俊宇</a></h4>
+								</li>
+								<li>
+									<span class="rel db ovh lh0">
+									<a href="#"><img src="../web/img/hot-section/list_7_120_120.jpg" width="120" height="120" alt="Syantis" /></a>
+									<em class="p-hot-val abs gf opy">播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+									</span>
+									<h4><a href="#">Syantis</a></h4>
+								</li>
+								<li>
+									<span class="rel db ovh lh0">
+									<a href="#"><img src="../web/img/hot-section/list_8_120_120.jpg" width="120" height="120" alt="阿九石道" /></a>
+									<em class="p-hot-val abs gf opy">播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+									</span>
+									<h4><a href="#">阿九石道</a></h4>
+								</li>
+								<li>
+									<span class="rel db ovh lh0">
+									<a href="#"><img src="../web/img/hot-section/list_9_120_120.jpg" width="120" height="120" alt="风小筝（覃沐曦）" /></a>
+									<em class="p-hot-val abs gf opy">播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+									</span>
+									<h4><a href="#">风小筝（覃沐曦）</a></h4>
+								</li>
+								<li>
+									<span class="rel db ovh lh0">
+									<a href="#"><img src="../web/img/hot-section/list_10_120_120.jpg" width="120" height="120" alt="Keyee" /></a>
+									<em class="p-hot-val abs gf opy">播放热门歌曲<i class="abs r0 bgi-nav btn wh20 i-lsen "></i></em>
+									</span>
+									<h4><a href="#">Keyee</a></h4>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--热门音乐人 end-->
+
+				<!--音乐现场 start-->
+				<div class="m-pop mt30 pl0">
+					<div class="m-pop-title-col ovh  pl20">
+						<h2 class="m-pop-title fl "><i class="bgi-cont btn wh30 i-live"></i>音乐现场</h2>
+						<a class="m-more-well fr " href="#"><i class="bgi btn"></i>更多精彩</a>
+					</div>
+					<div class="m-pop-content-col ovh ">
+						<dl class="p-live">
+							<dt class="rel">
+								<a href="#"><img src="../web/img/live-mod/list_1_300_200.jpg" width="210" height="140" alt="田松林"/></a>
+								<span class="mark live"></span>
+								<a class="p-live-val abs dn opy" href="#" title="进入直播现场"><i class="bgi btn vm i-scene"></i></a>
+							</dt>
+							<dd class="b ell"><a href="#">袁雨桐</a></dd>
+							<dd class="ell g9" title="田松林直播演唱《听雨》"><i class="rel bgi btn i-crowd"></i>143个观众</dd>
+							<dd class="ell g9">这个妹子的家里藏着个汉子</dd>
+						</dl>
+						<dl class="p-live">
+							<dt class="rel">
+								<a href="#"><img src="../web/img/live-mod/list_2_300_200.jpg" width="210" height="140" alt="5singLIVE"/></a>
+								<span class="mark review">回顾</span>
+								<a class="p-live-val abs dn opy" href="#" title="进入直播现场"><i class="bgi btn vm i-scene"></i></a>
+							</dt>
+							<dd class="b ell"><a href="#">5singLIVE</a></dd>
+							<dd class="ell g9" title="武林大会冥月现场演唱《心剑游龙》">武林大会冥月现场演唱《心剑游龙》</dd>
+							<dd class="ovh g9"><span class="fl">20150809</span><span class="fr"><i class="rel dib i-play"></i><em>4831</em>&nbsp;播放</span></dd>
+						</dl>
+						<dl class="p-live">
+							<dt class="rel">
+								<a href="#"><img src="../web/img/live-mod/list_3_300_200.jpg" width="210" height="140" alt="Fun.范恩"/></a>
+								<span class="mark review">回顾</span>
+								<a class="p-live-val abs dn opy" href="#" title="进入直播现场"><i class="bgi btn vm i-scene"></i></a>
+							</dt>
+							<dd class="b ell"><a href="#">Fun.范恩</a></dd>
+							<dd class="ell g9" title="范恩直播演唱《sparksfly》">范恩直播演唱《sparksfly》</dd>
+							<dd class="ovh g9"><span class="fl">20150609</span><span class="fr"><i class="rel dib i-play"></i><em>3867</em>&nbsp;播放</span></dd>
+						</dl>
+						<dl class="p-live">
+							<dt class="rel">
+								<a href="#"><img src="../web/img/live-mod/list_4_300_200.jpg" width="210" height="140" alt="Caroline_Sue"/></a>
+								<span class="mark review">回顾</span>
+								<a class="p-live-val abs dn opy" href="#" title="进入直播现场" ><i class="bgi btn vm i-scene"></i></a>
+							</dt>
+							<dd class="b ell"><a href="#">Caroline_Sue</a></dd>
+							<dd class="ell g9" title="caroline_sue直播演唱《giveyouwhatyoulike》">caroline_sue直播演唱《giveyouwhatyoulike》</dd>
+							<dd class="ovh g9"><span class="fl">20150609</span><span class="fr"><i class="rel dib i-play"></i><em>2978</em>&nbsp;播放</span></dd>
+						</dl>
+					</div>
+				</div>
+				<!--音乐现场 end-->
+
+				<!--推荐 start-->
+				<div class="ovh">
+
+					<!--原创 翻唱 start -->
+					<div class="fl w650">
+						<div id="js-original-tab" class="m-pop w610 ">
+							<div class="m-pop-title-col ovh ">
+								<h2 class="m-pop-title fl "><i class="bgi-cont btn wh30 "></i>原创推荐</h2>
+								<a class="m-more-play fl " href="#"><i class="bgi-nav btn"></i>播放全部</a>
+								<a class="jc-tab-btn jc-tab-next m-more-cg fr " href="javascript:;"><i class="bgi-nav btn "></i>换一批</a>
+							</div>
+							<div class="jc-tab-content jc-tab-item am-coverflow m-pop-content-col p-song-col rel ovh">
+								<!--动态生成-->
+							</div>
+						</div>
+
+						<div id="js-cover-tab" class=" m-pop w610 mt0 bt0">
+							<div class="ovh m-pop-title-col">
+								<h2 class="m-pop-title fl"><i class="bgi-cont btn wh30  i-cover"></i>翻唱推荐</h2>
+								<a class="m-more-play fl" href="#"><i class="bgi-nav btn"></i>播放全部</a>
+								<a class="jc-tab-btn jc-tab-prev m-more-cg fr" href="javascript:;"><i class="bgi-nav btn"></i>换一批</a>
+							</div>
+							<div class="jc-tab-content jc-tab-item am-coverflow m-pop-content-col p-song-col rel ovh">
+								<!--动态生成-->
+							</div>
+						</div>
+					</div>
+					<!--原创 翻唱 end-->
+
+					<!--好歌抢先听-s-->
+					<div id="js-audi-tab" class="fr w290 m-tab">
+						<div class="ovh bgi-cont m-tab-title-col  p-audi-title">
+							<a class="fr m-more-play" href="#"><i class="bgi-nav btn"></i>播放全部</a>
+							<ul class="jc-tab-title m-tab-list ovh">
+								<li class="curr"><a href="javascript:;">原创候选</a></li>
+								<li><a href="javascript:;">翻唱候选</a></li>
+								<li><a href="javascript:;">原创排行榜</a></li>
+							</ul>
+						</div>
+						<div class="jc-tab-content am-coverflow m-tab-content-col p-audi-col rel ovh">
+							<!--动态生成-->
+						</div>
+						<div class="p-audi-pg fr pr15">
+							<a class="jc-tab-btn jc-tab-prev bgi-nav btn vm wh16 i-prevb" href="javascript:;">上一页</a>
+							<a class="jc-tab-btn jc-tab-next bgi-nav btn vm wh16 i-nextb" href="javascript:;">下一页</a>
+						</div>
+					</div>
+					<!--好歌抢先听-e-->
+
+				</div>
+				<!--推荐 end-->
+
+				<div class="m-pop ovh pt10 pr0 ">
+					<div id="js-album-tab" class="m-tab fl w630 mt0">
+						<div class="m-tab-title-col ovh">
+							<a class="m-more-def fr f14" href="#"><i class="bgi-nav btn wh16"></i>More</a>
+							<ul class="jc-tab-title m-tab-list ovh f14">
+								<li class="curr jc-tab-btn jc-tab-prev"><a href="javascript:;">歌单</a></li>
+								<li class="jc-tab-btn jc-tab-next"><a href="javascript:;">专辑</a></li>
+							</ul>
+						</div>
+						<div class="jc-tab-content jc-tab-item am-coverflow m-pop-content-col p-album-col rel ovh mt0">
+							<!-- 动态生成-->
+						</div>
+					</div>
+					<div id="js-spread-tab" class="m-tab fr w290 mt0">
+						<div class="m-tab-title-col ovh">
+							<ul class="jc-tab-title m-tab-list ovh f14">
+								<li class="curr jc-tab-btn jc-tab-prev"><a href="javascript:;">分享最多</a></li>
+								<li class="jc-tab-btn jc-tab-next"><a href="javascript:;">传播最快</a></li>
+							</ul>
+						</div>
+						<div class="jc-tab-content jc-tab-item am-coverflow m-pop-content-col rel p-spread-col ovh mt0">
+							<!--动态生成-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--内容结束-->
+
+		<!--脚部开始-->
+		<div class="p-footer-box ">
+			<div class="m-ft-service">
+				<div class="lyt960 ovh">
+					<dl class="m-ft-nav">
+						<dt><h2 class="bgi-logo btn  i-flogo"></h2></dt>
+						<dd>
+							<ul class="ovh">
+								<li><a href="#">关于我们</a></li>
+								<li><a href="#">权利声明</a></li>
+								<li><a href="#">商务合作</a></li>
+								<li><a href="#">合作伙伴</a></li>
+								<li><a href="#">诚聘英才</a></li>
+								<li><a href="#">联系我们</a></li>
+							</ul>
+						</dd>
+					</dl>
+					<dl class="m-ft-partner">
+						<dt><h2 class="n">合作伙伴</h2></dt>
+						<dd>
+							<a class="bgi-logo btn i-kugou" href="#">酷狗音乐</a>
+							<a class="bgi-logo btn i-lexiang" href="#">乐享12350</a>
+							<a class="bgi-logo btn i-aiyy" href="#">爱音乐</a>
+							<a class="bgi-logo btn i-woyy" href="#">沃音乐</a>
+						</dd>
+					</dl>
+					<dl class="m-ft-topic">
+						<dt><h2 class="n">实用话题</h2></dt>
+						<dd>
+							<ul class="ovh">
+								<li><a href="#">1、网站违规广告细则说明</a></li>
+								<li><a href="#">2、申请网站推荐歌手和明星会员</a></li>
+								<li><a href="#">3、5sing客户端下载</a></li>
+								<li><a href="#">4、申请网站推荐歌曲</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="m-ft-copyright g9 pt20">
+				<div class="lyt1000">
+					<p>5sing中国原创音乐基地 http://5sing.kugou.com/<a class="dib g9 ml10" href="#">粤ICP备09017694号</a></p>
+					<p>网络文化经营许可证：粤网文[2013]0233-083号 | 信息网络传播视听节目许可证：1910564号 | 增值电信业务经营许可证：粤B2-20060339号 | 营业性演出许可证：穗天演440106026</p>
+					<p>广州酷狗计算机科技有限公司版权所有Copyright (C) 2015 KuGou.All Rights Reserved 违法和不良信息举报：www.12377.cn 举报电话：12377</p>
+				</div>
+			</div>
+		</div>
+		<!--脚部结束-->
+		<!--浏览器支持-->
+		<ul class="llq">
+			<li class="llq-ie8"></li>
+			<li class="llq-firefox"></li>
+			<li class="llq-chrome"></li>
+		</ul>
+		<script id="seajsnode" src="../static/js/libs/seajs/2.2.0/sea.js"></script>
+		<script src="../config.js"></script>
+		<script type="text/javascript">
+			seajs.use('app/index');
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,27 @@
+{{each $data as item i}}
+<ul class="jc-tab-list am-list {{if i===0}}current{{/if}}   p-album ovh">
+	{{each item as o j}} 
+	{{if i===0}}
+	<li class="mt20 pb20">
+		<span class="p-ablum-pic db rel">
+				<img src="{{o.url}}" width="111" height="111"/>
+				<em class="p-ablum-value abs b0 l0 gf opy "><i class="bgi-cont btn i-pop"></i>{{o.pop}}</em>
+		</span>
+		<a class="p-ablum-bg abs t0 l0 zx2" href="#"></a>
+		<a class="p-ablum-lsen abs dn t0 opy"><span class="dib_vm lh20 gf"><i class="bgi-nav btn wh20 i-lsen"></i><br />播放歌单</span></a>
+		<a class="p-ablum-des db tc ell b" href="#">{{o.name}}</a>
+	</li>
+	{{else}}
+	<li class="mt20">
+		<span class="p-ablum-pic db rel">
+				<img src="{{o.url}}" width="111" height="111"/>
+		</span>
+		<a class="p-ablum-bg bg-disc abs t0 l0 zx2" href="#"></a>
+		<a class="p-ablum-lsen abs dn t0 opy"><span class="dib_vm lh20 gf"><i class="bgi-nav btn wh20 i-lsen"></i><br />播放歌单</span></a>
+		<a class="p-ablum-des db tc ell b" href="#">{{o.title}}</a>
+		<a class="p-ablum-des db tc ell g9 an" href="#">{{o.name}}</a>
+	</li>
+	{{/if}} 
+	{{/each}}
+</ul>
+{{/each}}

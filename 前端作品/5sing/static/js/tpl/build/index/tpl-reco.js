@@ -1,0 +1,2 @@
+/*TMODJS:{"version":4,"md5":"9822853cdf954f43926ba89e4ec566c5"}*/
+define(function(require){return require("../template")("index/tpl-reco",function(a){"use strict";var b=this,c=(b.$helpers,b.$each),d=(a.item,a.i,a.o,a.j,b.$escape),e="";return c(a,function(a,b){e+=' <ul class="jc-tab-list am-list p-reco-list ',0===b&&(e+="current"),e+='"> ',c(a,function(a){e+=' <li><a class="ell" href="',e+=d(a.href),e+='"><i>\xb7</i><em>\u3010<s>',e+=d(a.type),e+="</s>\u3011</em>",e+=d(a.title),e+="</a></li> "}),e+=" </ul> "}),e+=" ",new String(e)})});

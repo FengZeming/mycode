@@ -1,0 +1,22 @@
+{{each $data as item i}}
+<ul class="jc-tab-list am-list {{if i===0}}current{{/if}} p-audi-list">
+	{{each item as o j}} 
+	<li class="wh55">
+		<span class="dib ell p-audi-pic ">
+			<img src="{{o.url}}"/>
+		</span>
+		<span class="dib p-audi-attr pl5">
+			<a class="db b" href="#">{{o.title}}</a>
+			<span class="ovh"><a class="fl ell g9" href="#">{{o.name}}</a></span>
+		</span>
+		<span class="rel dib p-audi-btn">
+		<a class="bgi-nav btn i-song" href="#">试听</a>
+		</span>
+	</li>
+	{{/each}}
+</ul>
+{{/each}}
+
+
+
+		
