@@ -1,0 +1,8 @@
+@charset "utf-8";
+/*进度条样式 */
+.md-progress{display: inline-block;width: 168px;height: 4px;background-color: #dcdcdc;}
+.md-progress span{display: block;height: inherit;width: 50%;background-color: #ec6d51;}
+.md-progress span.orange{background-color: #ef804f;}
+.md-progress span.yellow{background-color: #f19e4f;}
+.md-progress span.skyblue{background-color: #7ecaef;}
+.item-4 .total{margin: 0 20px 0 34px;}

@@ -1,0 +1,8 @@
+@charset "utf-8";
+/*选项卡模块样式*/
+.md-tabs{width: 488px;margin: 12px auto 25px auto;}
+.md-tabs-nav{height: 28px;line-height: 27px;overflow: hidden;}
+.md-tabs-nav li{float: left;margin-right: 2px;}
+.md-tabs-nav a{position: relative;display: block;padding: 0 22px;border: 1px solid #ccc;border-bottom: none;border-radius: 4px 4px 0 0;background-color: #ededf0;color: #535353;}
+.md-tabs-nav a.curr{background-color: #fff;z-index: 2;}
+.md-tabs-panel{position: relative;top: -1px;min-height: 1px;border: 1px solid #ccc;border-radius: 0 4px 4px 4px;}

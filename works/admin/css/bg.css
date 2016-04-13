@@ -1,0 +1,11 @@
+@charset "utf-8";
+[class*='i-']{display: inline-block;width: 16px;height: 16px;background: url(img/icon-bg.png) no-repeat;}
+.i-prev,
+.i-next{height: 17px;}
+.i-prev{background-position: 0 -16px;}
+.i-next{background-position: 0 -33px;}
+.i-price{background-position: 0 -50px;}
+.i-calendar{width: 32px;height: 32px;background-position: -16px -38px;}
+.i-login{top: 4px;}
+.i-switch{width: 28px;height: 38px;line-height: 37px;margin-left: 178px;margin-top: 9px;text-indent: 14px;color: #fff;background-position: -16px 0;}
+.btn-search{top: 6px;left: 35px;width: 17px;height: 17px;background: url(img/search.png) no-repeat;}
