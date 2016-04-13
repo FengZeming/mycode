@@ -1,0 +1,29 @@
+@charset "utf-8";
+.m-tags {
+    padding: 21px 0 0 26px;
+    overflow:hidden;
+}
+.m-tags h2 {
+    line-height: 54px;
+    font-size: 28px;
+}
+.m-tags label {
+    float: left;
+    line-height: 50px;
+    margin: 10px 14px 10px 3px;
+}
+.m-tags label input {
+    display: none;
+}
+.m-tags label span {
+    display: inline-block;
+    border: 1px solid #cdd6e1;
+    padding: 0 24px;
+    border-radius: 20px;
+}
+.m-tags input:checked+span {
+    border-color: #3c9bbb;
+    background-color: #3c9bbb;
+    color: #fff;
+   
+}

@@ -1,0 +1,22 @@
+/*定义变量*/
+$c666: #666;
+$cfff: #fff;
+$a-shake-list: 0,10,20,30,40,50,60,70,80,90,100;
+/*获取正数*/
+@function getPositive($num, $is:true) {
+    @return if($is,-$num,$num)/ ($num * 0 + 1);
+}
+
+@mixin font-dpr($font-size) {
+    font-size: $font-size;
+    [data-dpr="2"] & {
+        font-size: $font-size * 2;
+    }
+    [data-dpr="3"] & {
+        font-size: $font-size * 3;
+    }
+}
+// PX → REM 
+@function px2rem($px,$is:true, $base: 64) {
+  @return (getPositive($px,$is) / $base) * 1rem;
+}

@@ -1,0 +1,114 @@
+@charset "utf-8";
+@import "cm";
+html{height: 100%;}
+
+body {
+    margin: 0;
+    font:  arial, 'Microsoft Yahei';
+    height: inherit;
+}
+
+p{margin: 0;}
+ul{margin: 0;padding: 0; list-style: none;}
+
+h2,h3{
+    margin: 0;
+    font-weight: normal;
+}
+input,textarea{margin:0;padding:0;border:none; outline:none;}
+textarea{ resize:none; overflow:auto;}
+a,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+img{
+    border: none;
+    vertical-align: top;
+    width: 100%;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 10rem;
+    height: inherit;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.mh1000{
+    min-height: 940px !important;
+}
+.mt80{
+    margin-top: 80px;
+}
+.db {
+    display: block !important;
+}
+.tc {
+    text-align: center;
+}
+.fwn{
+    font-weight: normal;
+}
+.ft26{
+    font-size: 26px;
+}
+.ft28{
+    font-size: 28px;
+}
+.ft16{
+    font-size: 16px;
+}
+
+
+@keyframes a-welcome {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes a-shake {
+    @each $percent in $a-shake-list {
+        $i: index($a-shake-list, $percent);
+        $d: (getPositive(55-$i*5,$i%2==1));
+        #{$percent}% {
+            transform: rotate(#{$d}deg);
+        }
+    }
+}
+
+@keyframes a-cloud{
+     0%{
+          transform: translateX(0);
+     }
+     100%{
+         transform: translateX(#{px2rem(60,64)});
+     }
+}
+
+.a-tree {
+    animation: a-welcome 1s forwards;
+}
+.a-logo {
+    animation: a-welcome 0.5s 1s forwards;
+}
+.a-shake {
+    animation: a-shake 0.5s 2s;
+    transform-origin: left bottom;
+}
+.a-cloud{
+    animation: a-cloud 3s  linear 2s infinite alternate;
+}
+.t-welcome{
+    transition: 1.5s;
+}
+
+
+.t-info-show{
+    transform: scale(1);
+    opacity: 1;
+}
+.t-info-hide{
+    transform: scale(0);
+    opacity: 0;
+}
+
+
+
