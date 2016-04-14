@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+
+
+.list-box{
+	position: relative;
+	margin: 0 auto;
+	background: lightblue;
+		
+}
+.list-box .item{
+	position: absolute;
+	width: 236px;
+	
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>瀑布流懒加载</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+
+	<body>
+		<div class="waterfall-box">
+			<ul id="list-box" class="list-box">
+			</ul>
+			<div id="load">
+				我是看不见的
+			</div>
+		</div>
+		<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="index.js"></script>
+
+		<script type="text/javascript">
+			var curPage = 1,
+				perPageCount = 30;
+			WaterFall.init($('#list-box'));
+			Exposure.init($('#load'), function() {
+				getData(function(data) {
+					var $nodes = renderData(data);
+					WaterFall.start($nodes);
+				});
+			});
+
+			function getData(callBack) {
+				$.ajax({
+					url: 'http://platform.sina.com.cn/slide/album_tech',
+					type: 'get',
+					dataType: 'jsonp',
+					jsonp: "jsoncallback",
+					data: {
+						//app_key: '1271687855',
+						format: 'json',
+						size: 'img',
+						num: perPageCount,
+						page: curPage
+					},
+					success: function(ret) {
+						if (ret.status.code == 0) {
+							callBack(ret.data);
+							curPage++;
+						}
+					}
+				})
+			}
+
+			function renderData(items) {
+				var tpl = '',
+					$nodes;
+				for (var i = 0; i < items.length; i++) {
+					tpl += '<li class="item">';
+					tpl += ' <a href="#" class="link"><img src="' + items[i].img_url + '" alt=""></a>';
+					tpl += ' <h4 class="header">' + items[i].short_name + '</h4>';
+					tpl += '<p class="desp">' + items[i].short_intro + '</p>';
+					tpl += '</li>';
+				}
+				$nodes = $(tpl);
+				$('#list-box').append($nodes);
+				return $nodes;
+			}
+		</script>
+
+	</body>
+
+</html>
