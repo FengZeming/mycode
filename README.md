@@ -1,7 +1,18 @@
 ### 微风香水作品集
 
  - 前端作品
-  - 5sing -访问 views/index.html
+ 
+  - [5sing首页 ie8+ chrome@latest firefox@latest](http://fengzeming.github.io/mycode/works/full/5sing/views/index.html)
+  - [复杂的后台模板 chrome@latest](http://fengzeming.github.io/mycode/works/full/admin/index.html)
+  - [flex移动端布局 chrome@latest	](http://fengzeming.github.io/mycode/works/full/flex-layout/index.html)
+  - [栅格化布局 chrome@latest](http://fengzeming.github.io/mycode/works/full/grid-layout/index.html)
+  - [懒加载(全屏) ie8+ chrome@latest](http://fengzeming.github.io/mycode/works/effects/lazyload/screen/index.html)
+  - [懒加载(固定宽度) ie8+ chrome@latest](http://fengzeming.github.io/mycode/works/effects/lazyload/fixed/index.html)
+  - [懒加载(图片)  chrome@latest](http://fengzeming.github.io/mycode/works/effects/lazyload/img/index.html)
+  - [坚果手机效果  chrome@latest](http://fengzeming.github.io/mycode/works/effects/nuts-phone/index.html)
+  - [可拖拽便利贴效果 chrome@latest](http://fengzeming.github.io/mycode/works/effects/sticky-note/index.html)
+
+
 
 <link rel="stylesheet" type="text/css" href="./css/tree.css"/>
 <script>
