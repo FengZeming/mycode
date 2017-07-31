@@ -1,0 +1,19 @@
+{
+	"name": "donguri",
+	"version": "1.0.0",
+	"description": "donguri",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FengZeming"
+	},
+	"author": "wfxs https://github.com/FengZeming",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "^2.11.1",
+		"gulp": "^3.9.1"
+	}
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>图片懒加载</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+	</head>
+
+	<body>
+		<div class="box">
+			<ul id="list-box" class="list clearfix">
+				<!--<li class="item">
+					<a href="#"><img src="img/1.jpg" /></a>
+					<div class="info">
+						<div class="name">
+							<a href="#">Hexalab™</a>
+						</div>
+						<div class="author">
+							<span>作者：</span>
+							<a href="#">Ariel Di Lisio</a>
+						</div>
+						<div class="property">
+							<a href="#" title="图形设计">图形设计</a>,
+							<a href="#" title="网页设计">网页设计</a>,
+							<a href="#" title="品牌推广">品牌推广</a>
+						</div>
+					</div>
+					<div class="stat">
+						<i class="iconfont  icon-thumbup g9" ></i><span>156</span><i class="iconfont  icon-visibility g9" ></i><span>1517</span> <em class="i"><i class="iconfont  icon-timer g9" ></i></em>
+					</div>
+				</li>-->
+				<!--
+			  	-->
+			</ul>
+		</div>
+		<script id="tpl" type="text/template">
+			<%for(var i = 0; i < 100; i++){%>
+				<% var index = i%10+1;%>
+					<li class="item">
+						<a href="#">
+							<span class="load">
+								<span class="loader" >loading...</span>
+							</span>
+							<img src="" data-url="img/<%index%>.jpg" width="236" height="354" />
+						</a>
+						<div class="info">
+							<div class="name">
+								<a href="#">
+									<%data.name%>
+								</a>
+							</div>
+							<div class="author">
+								<span>作者：</span>
+								<a href="#">
+									<%data.author%>
+								</a>
+							</div>
+							<div class="property">
+								<%var pLen =data.property.length;%>
+									<%for(var j = 0; j <pLen; j++){%>
+										<%var p = data.property[j]; %>
+											<a href="#" title="<%p%>">
+												<%p%>
+											</a>
+											<% if((j+1)!==pLen){%>，
+												<%}%>
+													<%}%>
+							</div>
+						</div>
+						<div class="stat">
+							<i class="iconfont  icon-thumbup g9"></i><span><%data.pop%></span>
+							<i class="iconfont  icon-visibility g9"></i><span><%data.check%></span>
+							<em class="i"><i class="iconfont  icon-timer g9" ></i></em>
+						</div>
+					</li>
+					<%}%>
+		</script>
+		<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="../../../resource/js/template.js"></script>
+		<script type="text/javascript">
+			var data = {
+				name: '前端患者，有何不可',
+				author: '微风香水',
+				property: ['html5', 'css', 'js', 'gulp', '...'],
+				pop: 156,
+				check: 1517
+			};
+			var $box = $('#list-box'),
+				$doc = $(document),
+				$win = $(window);
+			var tpl = $('#tpl').html();
+			var timer;
+			//填充数据
+			$box.html(template(tpl, data));
+			//绑定滚动事件
+			$win.on('scroll', function() {
+				timer && clearTimeout(timer);
+				timer = setTimeout(function() {
+					checkShow();
+				}, 300);
+			});
+			$win.on('unload', function() {
+				$('html,body').scrollTop(0);
+			});
+			//加载后先执行一次
+			checkShow();
+
+			function checkShow() {
+				$box.find('li').each(function() {
+					var self = $(this);
+					if (self.attr('loaded')) return;
+					if (isShow(self)) {
+						setTimeout(function() {
+							self.find('img').each(function() {
+								var self = $(this);
+								self.attr('src', self.data('url'));
+								self.prev('.load').hide();
+							});
+							self.attr('loaded', true);
+						}, 2500);
+					}
+				});
+			}
+			//判断当前滚动到哪个元素
+			function isShow($el) {
+				var iscrollH = $doc.scrollTop();
+				var iwinH = $win.height();
+				var itH = $el.offset().top;
+				if (itH < iwinH + iscrollH) {
+					return true;
+				}
+				return false;
+			}
+		</script>
+	</body>
+
+</html>

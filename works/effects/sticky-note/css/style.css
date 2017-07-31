@@ -1,0 +1,109 @@
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0;
+  padding-left: 36px;
+  font: 14px/1.5 'Microsoft Yahei'; }
+
+.t10 {
+  top: 10px; }
+
+.b10 {
+  bottom: 10px; }
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block; }
+
+.icon {
+  position: absolute;
+  left: 10px;
+  font-size: 18px !important;
+  color: #fff;
+  cursor: pointer; }
+
+.side-pack {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 100%;
+  background: #2a2a2a; }
+
+.content {
+  position: relative;
+  min-height: 100%; }
+
+.note {
+  position: absolute;
+  width: 160px;
+  height: 166px;
+  color: #333; }
+
+.note-head {
+  height: 20px;
+  background-color: #ea9b35;
+  cursor: move; }
+
+.note-ct {
+  padding: 10px;
+  height: 129px;
+  background-color: #efb04e;
+  outline: none;
+  overflow: auto; }
+
+.draggable {
+  opacity: 0.8;
+  cursor: move; }
+
+.delete {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  z-index: 99999; }
+
+.note-head:hover .delete {
+  opacity: 1; }
+
+.backdrop:after,
+.backdrop:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.backdrop:after {
+  background: #000 url(http://7xpvnv.com2.z0.glb.qiniucdn.com/ba25c630-1c91-4ac1-a3de-65555d78c147.png) repeat top center;
+  z-index: -2; }
+
+.backdrop:before {
+  background: transparent url(http://7xpvnv.com2.z0.glb.qiniucdn.com/493b97e6-c499-4b41-a26b-8942873615b0.png) repeat top center;
+  -webkit-animation: move-twink-back 20s linear infinite;
+  animation: move-twink-back 20s linear infinite;
+  z-index: -1; }
+
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -1000px 500px; } }
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -1000px 500px; } }

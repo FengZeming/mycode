@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>便利贴效果</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css" />
+	</head>
+	<body>
+		<div class="side-pack">
+			<span class="icon t10 fa fa-plus  " href="javascript:;"></span>
+		</div>
+		<div id="js-content" class="content clearfix">
+			<!--<div class="note">
+				<div class="note-head">
+				</div>
+				<span class="delete">&times;</span>
+				<div class="note-ct" contenteditable="true">
+					阿斯頓
+				</div>
+			</div>-->
+		</div>
+		<div class="backdrop"></div>
+		
+		<script id="tpl" type="text/template">
+			<div class="note">
+				<div class="note-head" style="background-color:<%data.color[0]%>;">
+					<span class="delete">&times;</span>
+				</div>
+				<div class="note-ct" style="background-color:<%data.color[1]%>;" contenteditable="true">
+					<%data.text%>
+				</div>
+			</div>
+		</script>
+		<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="../../resource/js/template.js"></script>
+		<script src="js/note.js"></script>
+		<script src="js/drag.js"></script>
+		<script type="text/javascript">
+			note.init();
+			drag.init({
+				callDel: function(id) {
+					note.del(id);
+				}
+			});
+			$('.fa-plus').on('click', function() {
+				note.add();
+			});
+		</script>
+	</body>
+
+</html>
