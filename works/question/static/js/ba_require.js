@@ -2,7 +2,7 @@
     'use strict';
     
     var oRequire = window.Nenu.require ,
-        jsPath = '/js/lib' ,
+        jsPath = 'js/lib' ,
         requirePath = jsPath + '/require/plugin' ,
         
         rModulePath = 'js/module';
