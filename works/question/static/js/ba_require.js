@@ -131,7 +131,7 @@
             jqToastr                : jsPath + '/jquery/plugin/toastr/2.0.3/jquery.toastr' ,
             jqWebUploader           : jsPath + '/jquery/plugin/webuploader/neWebUploader' ,
             jqSpinner               : jsPath + '/jquery/plugin/spinner/0.2.1/jquery.spinner' ,
-            jqICheck                : jsPath + '/jquery/plugin/iCheck/1.0.2/icheck' ,
+            jqICheck                : jsPath + '/jquery/plugin/icheck/1.0.2/icheck' ,
             jqJsonForm              : jsPath + '/jquery/plugin/jsonForm/1.0.0/jquery.jsonForm' ,
             jqEHook                 : jsPath + '/jquery/plugin/eHook/1.0.0/jquery.eHook' ,
             jqListBox               : jsPath + '/jquery/plugin/listbox/2.0.0/jquery.listbox' ,
