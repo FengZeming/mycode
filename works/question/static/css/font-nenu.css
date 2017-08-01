@@ -1,0 +1,93 @@
+
+
+@font-face {
+    font-family: "fontnenu";
+    src: url('../fonts/fontnenu.eot?t=1482817368449'); /* IE9*/
+    src: url('../fonts/fontnenu.eot?t=1482817368449#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/fontnenu.woff?t=1482817368449') format('woff'), /* chrome, firefox */ url('../fonts/fontnenu.ttf?t=1482817368449') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../fonts/fontnenu.svg?t=1482817368449#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.fne {
+
+    /* display: inline-block;
+     font: normal normal normal 14px/1 fontNenu;
+     font-size: inherit;
+     text-rendering: auto;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;*/
+
+    font-family: "fontNenu" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+/*置顶*/
+/*.fne-sticky:before { content: "\e66d"; }*/
+
+/*一列*/
+.fne-col-1:before {
+    content: "\e7f5";
+}
+
+/*二列*/
+.fne-col-2:before {
+    content: "\e621";
+}
+
+/*日期*/
+.fne-date:before {
+    content: "\e77e";
+}
+
+/*上传*/
+.fne-uploader:before {
+    content: "\e60e";
+}
+
+/*数字*/
+
+.fne-number:before {
+    content: "\e629";
+}
+
+/*单行文本*/
+
+.fne-text:before {
+    content: "\e64b";
+}
+
+/*下拉菜单*/
+.fne-select:before {
+    content: "\e7f4";
+}
+
+/*多行文本*/
+.fne-textarea:before {
+    content: "\e648";
+}
+
+/*单选*/
+.fne-radio:before {
+    content: "\e6b0";
+}
+
+/*多选*/
+.fne-checkbox:before {
+    content: "\e693";
+}
+
+/*上传*/
+.fne-upload:before {
+    content: "\e761";
+}
+
+/*图片*/
+.fne-img:before {
+    content: "\e607";
+}
+
+/*评分*/
+.fne-raty1:before { content: "\e6a6"; }
+.fne-raty2:before { content: "\e653"; }

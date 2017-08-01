@@ -1,0 +1,52 @@
+.file {
+    display: block;
+    height: 100px;
+    width: 100%;
+    background-size:contain ;
+    background-repeat: no-repeat;
+
+}
+
+.file-doc {
+
+    background-image: url("img/doc.png");
+}
+
+.file-zip {
+
+    background-image: url("img/zip.png") ;
+}
+
+.file-txt {
+     background-image: url("img/txt.png") ;
+ }
+
+.file-ai {
+    background-image: url("img/ai.png") ;
+}
+.file-audio {
+    background-image: url("img/audio.png") ;
+}
+
+.file-exe {
+    background-image: url("img/exe.png") ;
+}
+
+.file-html {
+    background-image: url("img/html.png") ;
+}
+
+.file-pdf {
+    background-image: url("img/pdf.png") ;
+}
+.file-ppt {
+    background-image: url("img/ppt.png") ;
+}
+
+.file-video {
+    background-image: url("img/video.png") ;
+}
+.file-xls {
+    background-image: url("img/xls.png") ;
+}
+

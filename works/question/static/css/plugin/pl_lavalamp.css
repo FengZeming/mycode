@@ -1,0 +1,112 @@
+/*jquery 插件 lavalamp 样式表*/
+.pl-lavalamp {
+
+    position: relative;
+    border-color: #f5f5f5;
+}
+
+.pl-lavalamp .highlight {
+    position: absolute;
+    bottom: -1px;
+    border-bottom: 2px solid #55b3e9;
+}
+
+@media (max-width: 767px) {
+    .pl-lavalamp .highlight {
+        display: none;
+    }
+}
+
+.pl-lavalamp> li {
+    height: inherit;
+    line-height: inherit;
+    margin-bottom: 0;
+}
+
+.pl-lavalamp> li> a {
+    margin-right: 0;
+    padding: 0 20px !important;
+    line-height: 59px;
+    border: none;
+    color: #313131;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+}
+
+@media (max-width: 1199px) {
+    .pl-lavalamp> li> a {
+        padding: 5px 10px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .pl-lavalamp> li> a {
+        padding: 8px;
+    }
+}
+
+.pl-lavalamp> li> a:hover,
+.pl-lavalamp> li> a:focus {
+
+    background: none !important;
+}
+
+.pl-lavalamp> li.active> a,
+.pl-lavalamp> li:hover> a {
+    border: none;
+    background: none;
+    color: #55b3e9;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 767px) {
+    .pl-lavalamp> li.active> a,
+    .pl-lavalamp> li:hover> a {
+        border: none;
+    }
+}
+
+.pl-lavalamp> li.active> a .text-muted,
+.pl-lavalamp> li:hover> a .text-muted {
+    color: #55b3e9;
+}
+
+.pl-lavalamp> li.active> a .badge,
+.pl-lavalamp> li:hover> a .badge {
+    background-color: #55b3e9;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.pl-lavalamp .badge {
+    margin-left: 5px;
+    background-color: #919191;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.pl-lavalamp > li.active > a,
+.pl-lavalamp > li.active > a:hover,
+.pl-lavalamp > li.active > a:focus {
+
+    border:none ;
+
+}
+
+
+
+
+

@@ -1,0 +1,466 @@
+/*#container {
+    color: #838383;
+    font-size: 12px;
+}*/
+
+.ne-uploader,
+.ne-uploader * {
+	box-sizing: border-box;
+}
+
+.ne-uploader p {
+	margin: 0;
+}
+
+
+/*组件主区域*/
+
+.ne-uploader-queue {
+	margin: 15px;
+
+	overflow: hidden;
+}
+
+.ne-uploader-queue.filled {
+	margin: 0;
+	padding: 15px 0 0 15px;
+	border: 0px;
+}
+
+
+/*
+.ne-uploader-queue.webuploader-dnd-over {
+    border: 3px dashed #999999;
+}
+*/
+
+.ne-uploader .de-invisible {
+	/* position: absolute !important;
+     clip: rect(1px 1px 1px 1px);
+     !* IE6, IE7 *!
+     clip: rect(1px, 1px, 1px, 1px);*/
+	display: none;
+}
+
+
+/*选择文件按钮区域*/
+
+.ne-uploader-pack {
+	position: relative;
+	min-height: 350px;
+	padding-top: 178px;
+	text-align: center;
+	background: url(webuploader.png) center 93px no-repeat;
+
+	font-size: 18px;
+
+	border: 3px dashed #e6e6e6;
+	color: #cccccc;
+}
+
+
+/*点击选择图片的按钮*/
+
+.ne-uploader-pack .webuploader-pick {
+	font-size: 18px;
+	background: #00b7ee;
+	border-radius: 3px;
+	line-height: 44px;
+	padding: 0 30px;
+	*width: 120px;
+	color: #fff;
+	display: inline-block;
+	margin: 0 auto 20px auto;
+	cursor: pointer;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+/*按钮鼠标移入变色*/
+
+.ne-uploader-pack .webuploader-pick-hover {
+	background: #00a2d4;
+}
+
+
+/*.ne-uploader-pack .flashTip {
+	color: #666666;
+	font-size: 12px;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 20px;
+}*/
+
+
+/*.ne-uploader-pack .flashTip a {
+	color: #0785d1;
+	text-decoration: none;
+}
+
+.ne-uploader-pack .flashTip a:hover {
+	text-decoration: underline;
+}*/
+
+
+/*item包装器*/
+
+.ne-uploader-filelist {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ne-uploader-filelist:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+
+.ne-uploader-filelist li {
+	position: relative;
+	float: left;
+	margin: 0 15px 15px 0;
+	/* width: 110px;
+    height: 110px;*/
+	font-size: 12px;
+	/* background: url(bg.png) no-repeat;*/
+	text-align: center;
+	overflow: hidden;
+}
+
+.ne-uploader-filelist li:hover {
+	background: #f4f9fe;
+}
+
+
+/*.ne-uploader-filelist li p.log {
+	position: relative;
+	top: -45px;
+}*/
+
+.ne-uploader-filelist .file-warp {
+	position: relative;
+	width: 100px;
+	margin: 15px;
+}
+
+.ne-uploader-filelist li p.title {
+	/* position: absolute;
+    top: 5px;*/
+	/*left: 0;*/
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	/* text-indent: 5px;*/
+	/* text-align: left;*/
+}
+
+
+/*进度条*/
+
+.ne-uploader-filelist li p.progress {
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	width: 100%;
+	height: 8px;
+	overflow: hidden;
+	z-index: 50;
+	border-radius: 0;
+	background: none;
+	-webkit-box-shadow: 0 0 0;
+}
+
+.ne-uploader-filelist li p.progress span {
+	display: none;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	background: #1483d8 url(progress.png) repeat-x;
+	-webit-transition: width 200ms linear;
+	-moz-transition: width 200ms linear;
+	-o-transition: width 200ms linear;
+	-ms-transition: width 200ms linear;
+	transition: width 200ms linear;
+	-webkit-animation: progressmove 2s linear infinite;
+	-moz-animation: progressmove 2s linear infinite;
+	-o-animation: progressmove 2s linear infinite;
+	-ms-animation: progressmove 2s linear infinite;
+	animation: progressmove 2s linear infinite;
+	-webkit-transform: translateZ(0);
+}
+
+@-webkit-keyframes progressmove {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 17px 0;
+	}
+}
+
+@-moz-keyframes progressmove {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 17px 0;
+	}
+}
+
+@keyframes progressmove {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 17px 0;
+	}
+}
+
+
+/*缩略图*/
+
+.ne-uploader-filelist li .thumb {
+	position: relative;
+	z-index: 2;
+	/*width: 110px;
+    height: 110px;
+    line-height: 110px;*/
+	overflow: hidden;
+	vertical-align: middle;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webit-transition: 200ms ease-out;
+	-moz-transition: 200ms ease-out;
+	-o-transition: 200ms ease-out;
+	-ms-transition: 200ms ease-out;
+	transition: 200ms ease-out;
+}
+
+.ne-uploader-filelist li .type {
+	/* width: 100%;*/
+}
+
+
+/*错误提示*/
+
+.ne-uploader-filelist li .error {
+	position: absolute;
+	z-index: 100;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	opacity: 0.8;
+	background: #f43838;
+	color: #fff;
+}
+
+
+/*成功样式*/
+
+.ne-uploader-filelist li .success {
+	position: absolute;
+	display: block;
+	z-index: 200;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	background: url(success.png) no-repeat right bottom;
+}
+
+
+/*文件按钮*/
+
+.ne-uploader-filelist .file-panel {
+	position: absolute;
+	z-index: 300;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#80000000', endColorstr='#80000000') \0;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.ne-uploader-filelist .file-panel span {
+	display: inline;
+	float: right;
+	margin: 5px 1px 1px;
+	width: 24px;
+	height: 24px;
+	text-indent: -9999px;
+	overflow: hidden;
+	cursor: pointer;
+	background: url(icons.png) no-repeat;
+}
+
+.ne-uploader-filelist .file-panel .rotateLeft {
+	background-position: 0 -24px;
+}
+
+.ne-uploader-filelist .file-panel .rotateLeft:hover {
+	background-position: 0 0;
+}
+
+.ne-uploader-filelist .file-panel .rotateRight {
+	background-position: -24px -24px;
+}
+
+.ne-uploader-filelist .file-panel .rotateRight:hover {
+	background-position: -24px 0;
+}
+
+.ne-uploader-filelist .file-panel .cancel {
+	background-position: -48px -24px;
+}
+
+.ne-uploader-filelist .file-panel .cancel:hover {
+	background-position: -48px 0;
+}
+
+
+/*操作栏*/
+
+.ne-uploader-bar {
+	position: relative;
+	display: none;
+	padding: 0 15px;
+	height: 55px;
+	line-height: 55px;
+	vertical-align: middle;
+	border-top: 1px solid #dadada;
+}
+
+
+/*进度条*/
+
+.ne-uploader-bar .progress {
+	position: relative;
+	display: inline-block;
+	margin: 0 10px 0 0;
+	width: 198px;
+	height: 18px;
+	line-height: 20px;
+	text-align: center;
+	border: 1px solid #1483d8;
+	background: #fff;
+	color: #6dbfff;
+}
+
+
+/*百分比*/
+
+.ne-uploader-bar .percentage {
+	width: 0;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #1483d8;
+	position: absolute;
+}
+
+
+/*进度信息*/
+
+.ne-uploader-bar .text {
+	position: relative;
+	z-index: 10;
+}
+
+
+/*提示信息*/
+
+.ne-uploader-bar .info {
+	display: inline-block;
+	font-size: 14px;
+	color: #666666;
+}
+
+
+/*按钮*/
+
+.ne-uploader-bar .btns {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	line-height: 40px;
+}
+
+
+/*继续上传按钮*/
+
+.ne-uploader-bar .pick-btn {
+	display: inline-block;
+	float: left;
+}
+
+.ne-uploader-bar .btns .webuploader-pick,
+.ne-uploader-bar .btns .upload-btn,
+.ne-uploader-bar .btns .upload-btn.state-uploading,
+.ne-uploader-bar .btns .upload-btn.state-paused {
+	display: inline-block;
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	margin-left: 10px;
+	padding: 0 18px;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 3px;
+	background: #ffffff;
+	border: 1px solid #cfcfcf;
+	color: #565656;
+}
+
+.ne-uploader-bar .btns .webuploader-pick-hover,
+.ne-uploader-bar .btns .upload-btn:hover,
+.ne-uploader-bar .btns .upload-btn.state-uploading:hover,
+.ne-uploader-bar .btns .upload-btn.state-paused:hover {
+	background: #f0f0f0;
+}
+
+.ne-uploader-bar .btns .upload-btn {
+	background: #00b7ee;
+	color: #fff;
+	border-color: transparent;
+}
+
+.ne-uploader-bar .btns .upload-btn:hover {
+	background: #00a2d4;
+}
+
+.ne-uploader-bar .btns .upload-btn.disabled {
+	pointer-events: none;
+	opacity: 0.6;
+}
+
+
+/*总错误信息提示*/
+
+.ne-uploader-error.primary {
+	color: #428bca;
+}
+
+.ne-uploader-error.success {
+	color: #5cb85c;
+}
+
+.ne-uploader-error.info {
+	color: #5bc0de;
+}
+
+.ne-uploader-error.danger {
+	color: #d9534f;
+}

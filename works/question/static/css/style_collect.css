@@ -1,0 +1,42 @@
+/* inject:less-imports */
+/* endinject */
+body {
+  color: #676a6c;
+  background: url("img/custom_bg.png") repeat;
+}
+.collect-main {
+  margin: 50px auto;
+  padding: 0 20px 20px 20px;
+  width: 1024px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.collect-main .dec-split-line {
+  border: 2px solid #75abc5;
+}
+.collect-main .dec-describe {
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: left;
+}
+.collect-header {
+  text-align: center;
+}
+.collect-header h1 {
+  line-height: 1.2;
+  font-size: 22px;
+}
+.collect-content .ui-draggable {
+  margin-top: 20px;
+}
+.collect-valid-msg {
+  width: 123px;
+  padding: 2px;
+  background-color: #f2dede;
+  border: 1px solid #bf8786;
+  color: #a94442;
+}
+.collect-footer {
+  padding-top: 20px;
+  text-align: center;
+}

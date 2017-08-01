@@ -1,0 +1,11 @@
+.ui-layout-pane {
+    background: #fff;
+    border:     1px solid #e7eaec;
+    padding:    10px;
+    overflow:   auto;
+}
+
+/*所有滚动条样式*/
+.ui-layout-resizer-west{
+
+}

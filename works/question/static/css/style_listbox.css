@@ -1,0 +1,203 @@
+select[multiple], select[size] {
+    height: 200px;
+    padding: 7px;
+
+}
+
+select[multiple]:focus, select[size]:focus {
+    border-color: #ddd;
+}
+
+select[multiple] option, select[size] option {
+    padding: 7px 12px;
+    border-radius: 3px
+}
+
+select[multiple] option + option, select[size] option + option {
+    margin-top: 1px
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fcfcfc;
+    border-color: #ddd;
+}
+
+.btn-default:focus, .btn-default.focus, .btn-default:hover {
+    background-color: #fcfcfc;
+    border-color: #ddd;
+    color: #333;
+}
+
+.btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    background-color: #fcfcfc;
+    border-color: #ddd;
+    color: #333;
+}
+
+.btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+    background-color: #fcfcfc;
+    border-color: #ddd;
+    color: #333;
+}
+
+.btn-default.disabled {
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.01) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.01) inset
+}
+
+.btn-default:active, .btn-default.active {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.02) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.02) inset
+}
+
+/* ------------------------------------------------------------------------------
+*
+*  # Bootstrap Duallistbox
+*
+*  Styles for listbox.js - A responsive dual listbox widget optimized for Bootstrap
+*
+*  Version: 1.0
+*  Latest update: May 25, 2015
+*
+* ---------------------------------------------------------------------------- */
+.bootstrap-duallistbox-container .box1 {
+    margin-bottom: 20px;
+}
+
+.bootstrap-duallistbox-container select.form-control {
+    padding: 5px;
+}
+
+.bootstrap-duallistbox-container option {
+    display: block;
+    padding: 7px 12px;
+    border-radius: 2px;
+}
+
+.bootstrap-duallistbox-container.moveonselect .move,
+.bootstrap-duallistbox-container.moveonselect .remove {
+    display: none;
+}
+
+.bootstrap-duallistbox-container.moveonselect .moveall,
+.bootstrap-duallistbox-container.moveonselect .removeall {
+    width: 100%;
+}
+
+.bootstrap-duallistbox-container.moveonselect .btn-group .btn + .btn {
+    border-left-width: 1px;
+}
+
+.bootstrap-duallistbox-container .buttons {
+    width: 100%;
+    margin-bottom: -1px;
+}
+
+.bootstrap-duallistbox-container .clear1,
+.bootstrap-duallistbox-container .clear2 {
+    display: none;
+    margin-top: 20px;
+}
+
+.bootstrap-duallistbox-container .clear1,
+.bootstrap-duallistbox-container .clear2,
+.bootstrap-duallistbox-container .clear1:hover,
+.bootstrap-duallistbox-container .clear2:hover,
+.bootstrap-duallistbox-container .clear1:focus,
+.bootstrap-duallistbox-container .clear2:focus {
+    background-color: transparent;
+    border: 0;
+    color: #1e88e5;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.bootstrap-duallistbox-container .box1.filtered .clear1,
+.bootstrap-duallistbox-container .box2.filtered .clear2 {
+    display: inline-block;
+}
+
+.bootstrap-duallistbox-container .move,
+.bootstrap-duallistbox-container .remove,
+.bootstrap-duallistbox-container .moveall,
+.bootstrap-duallistbox-container .removeall {
+    width: 50%;
+}
+
+.bootstrap-duallistbox-container .btn-group .btn {
+    margin: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.bootstrap-duallistbox-container .btn-group .btn + .btn {
+    border-left-width: 0;
+}
+
+.bootstrap-duallistbox-container .btn-group .btn > i {
+    float: none;
+    text-align: center;
+}
+
+.bootstrap-duallistbox-container .filter {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.bootstrap-duallistbox-container .filter.placeholder {
+    color: #999999;
+}
+
+.bootstrap-duallistbox-container .info-container .info {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.bootstrap-duallistbox-container .info-container .info .label {
+    margin-right: 7px;
+}
+
+.sidebar .bootstrap-duallistbox-container {
+    text-align: center;
+}
+
+.sidebar .bootstrap-duallistbox-container .box1,
+.sidebar .bootstrap-duallistbox-container .box2 {
+    float: none;
+    width: 100%;
+}
+
+.sidebar .bootstrap-duallistbox-container .box1 {
+    padding-bottom: 5px;
+}
+
+.sidebar .bootstrap-duallistbox-container .box1:after {
+    content: '\e9c9';
+    font-size: 16px;
+    font-family: 'icomoon';
+    display: block;
+    text-align: center;
+    line-height: 1;
+    margin: 10px 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+@media (min-width: 1025px) {
+    .bootstrap-duallistbox-container .box1 {
+        margin-bottom: 0;
+    }
+
+    .sidebar .bootstrap-duallistbox-container .box1 {
+        margin-bottom: 0;
+    }
+}

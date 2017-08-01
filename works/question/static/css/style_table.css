@@ -1,0 +1,42 @@
+/*表格组件使用的css*/
+/*body {
+    overflow: hidden;
+}*/
+
+.ne-grid-body{
+    overflow: hidden;
+}
+
+/*表格单元格*/
+.ne-grid-columns {
+}
+/*行使用的btn class*/
+.ne-grid-row-btn {
+    margin: 0 10px;
+}
+
+.fixed-table-body .table{
+    table-layout: fixed;
+}
+
+
+/*如果屏幕小于768*/
+@media (max-width: 767px) {
+   /* html, body {
+        overflow: auto;
+    }*/
+    .ne-grid-body{
+        overflow: auto;
+    }
+
+    .ne-inherit {
+        height: auto;
+    }
+
+    .fixed-table-container {
+        height: 500px !important;
+    }
+
+}
+
+

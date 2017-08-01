@@ -1,0 +1,9 @@
+/*通用小功能*/
+
+/*过渡*/
+.ne-widget .elem[data-transition] {
+    vertical-align: middle;
+    -webkit-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s
+}

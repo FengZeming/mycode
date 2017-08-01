@@ -1,0 +1,204 @@
+/* position */
+.rel {
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+.fix {
+    position: fixed;
+}
+
+/* display */
+.dn {
+    display: none;
+}
+
+.di {
+    display: inline;
+}
+
+.db {
+    display: block;
+}
+
+.dib {
+    display: inline-block;
+}
+
+/* float */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.b10{
+    bottom: 10px;
+}
+
+/*padding*/
+.pr0 {
+    padding-right: 0;
+}
+
+.pl0 {
+    padding-left: 0;
+}
+
+.p10 {
+    padding: 10px;
+}
+.pb10{
+    padding-bottom: 10px;
+}
+
+
+.ml10 {
+    margin-left: 10px;
+}
+
+/* text-align */
+.tc {
+    text-align: center;
+}
+
+.tr {
+    text-align: right;
+}
+
+.tl {
+    text-align: left;
+}
+
+.tj {
+    text-align: justify;
+}
+
+/*字体*/
+.f10 {
+    font-size: 10px;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+/* overflow */
+.ovh{overflow:hidden;}
+.ova{overflow:auto;}
+
+/*无指定宽度元素居中*/
+.auto-align-x {
+    position: relative;
+    left: 50%;
+    float: left;
+}
+
+.auto-aligsn-s {
+    position: relative;
+    left: -50%;
+    border: 0;
+}
+
+/*继承最大化*/
+.ne-inherit {
+    height: inherit;
+}
+
+/*表格撑满页面使用*/
+.ne-fit {
+
+    /*width: auto;
+    overflow: auto;
+    position: relative;*/
+}
+
+/*页面内容外嵌套*/
+.ne-content {
+
+    background-color: #ffffff;
+    color: inherit;
+
+    border-color: #e7eaec;
+    -webkit-border-image: none;
+    -o-border-image: none;
+    border-image: none;
+
+    clear: both;
+}
+
+/*表单查询组件*/
+.ne-toobar {
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ne-nbsp {
+    display: inline-block;
+    width: 6px;
+}
+
+/*重写  插件的样式*/
+/*layerdate*/
+
+.layer-date {
+    display: block !important;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* 重写  bootstrap */
+
+/*校验方面样式*/
+.form-control:focus,
+.single-line:focus {
+    border-color: #66afe9;
+}
+
+.has-success .form-control, .has-success .form-control:focus {
+    border-color: #1ab394;
+}
+
+.has-error .form-control, .has-error .form-control:focus {
+    border-color: #ed5565;
+}
+
+.has-success .form-control-feedback {
+    color: #1ab394;
+}
+
+.has-error .form-control-feedback {
+    color: #ed5565;
+}
+
+.ne-form .help-block {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .ne-form .form-group .ne-input {
+        margin-top: 15px;
+    }
+
+    .ne-form .form-group .ne-input:first-child {
+        margin-top: 0;
+    }
+}
+

@@ -1,0 +1,127 @@
+/*表单组件的样式*/
+
+.ne-form {
+
+}
+
+.ne-form-row {
+
+}
+
+.ne-form-column {
+    padding-bottom: 10px;
+}
+
+.ne-form-lable {
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+}
+
+.ne-form-control {
+    overflow: hidden;
+    position: relative;
+}
+
+.ne-form-control .form-control-feedback {
+    right: 0 !important;
+}
+
+.ne-date .form-control-feedback {
+    right: 20px !important;
+}
+
+.ne-select .form-control-feedback {
+    right: 6px !important;
+}
+
+.ne-form-field {
+    width: 100%;
+}
+
+.ne-form-radio-control.input-sm {
+    padding: 0;
+    line-height: inherit;
+    border-radius: 0;
+}
+
+.ne-form-btn-control {
+}
+
+.ne-btn-spacing {
+    display: inline-block;
+    width: 15px;
+}
+
+.ne-form-require {
+    position: relative;
+    padding: 0 10px 0 0;
+}
+
+.ne-form-require i {
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+
+.layer-date {
+    max-width: none !important;
+}
+
+.laydate-icon {
+    height: 30px !important;
+    background-color: #fff !important;
+}
+
+.ne-line-dashed-row {
+
+}
+
+.ne-line-dashed-column {
+    display: none;
+}
+
+.ne-form-citys {
+    width: auto;
+    display: inline-block;
+}
+.ne-form-inlay{
+    padding-left:10px ;
+}
+
+
+.ne-button-control{
+    border-top: 1px solid #e7eaec ;
+    padding-top: 10px;
+}
+
+/*如果屏幕小于768*/
+@media (max-width: 767px) {
+    .ne-form-lable {
+        float: none;
+    }
+
+    .ne-line-dashed-row {
+        display: none;
+    }
+
+    .ne-line-dashed-column {
+        display: block;
+    }
+
+    .ne-form-citys {
+        width: 100%;
+        display: block;
+    }
+
+    .ne-form-citys.ml10 {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .ne-form-inlay{
+        padding: 0;
+        margin-top: 10px;
+    }
+
+}
+

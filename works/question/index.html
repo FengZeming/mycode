@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>问卷调查</title>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/font-awesome.css">
+    <link rel="stylesheet" href="static/css/font-nenu.css">
+    <link rel="stylesheet" href="static/css/font-icomoon.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/style_expand.css">
+    <link rel="stylesheet" href="static/css/style_widget.css">
+    <link rel="stylesheet" href="static/css/style_builder.css">
+    <link rel="stylesheet" href="static/js/lib/jquery/plugin/spinner/0.2.1/jquery.spinner.css">
+    <link rel="stylesheet" href="static/js/lib/jquery/plugin/jqueryUI/css/base/jquery-ui-1.10.4.custom.min.css">
+    <link rel="stylesheet" href="static/css/plugin/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" href="static/js/lib/jquery/plugin/icheck/skins/square/all.css">
+</head>
+
+<body>
+
+<!--加载-->
+<div class="ne-builder-loading-main" id="js_loading">
+    <div class="ly-header">
+        <div class="ly-btn"></div>
+        <div class="ly-btn"></div>
+    </div>
+    <div class="ly-content">
+        <div class="ly-left">
+            <ul class="clearfix">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="ly-center">
+            <div class="bbl-gif"></div>
+            <div class="bbl-item"></div>
+            <div class="bbl-item"></div>
+            <div class="bbl-item"></div>
+        </div>
+        <div class="ly-right">
+            <div class="bbl-attr"></div>
+            <div class="bbl-attr" style="height: 50px;"></div>
+            <div class="bbl-attr" style="height: 100px;"></div>
+            <div class="bbl-attr" style="height: 200px;"></div>
+        </div>
+    </div>
+</div>
+<!--加载-->
+
+<div class="ne-builder dn" id="js_builder">
+
+    <!--  头部_开始 -->
+    <div class="ne-builder-header">
+        <ul class="ne-builder-bar_top">
+            <li>
+                <a class="btn btn-white btn-bitbucket" id="js_btn_save" data-hook="global" data-on="save"><i
+                        class="fa fa-save"></i> 保存</a>
+                <a class="btn btn-white btn-bitbucket" id="js_btn_save" data-hook="global" data-on="collect"><i
+                        class="fa fa-eye"></i> 预览</a>
+                <form id="js_collect_form" method="post" action="/form/collect" style="display: none;">
+                    <input type="hidden" name="data" value=""/>
+                </form>
+            </li>
+
+        </ul>
+    </div>
+    <!--  头部_结束 -->
+
+    <!-- 左侧菜单_开始 -->
+    <div class="ne-builder-menu_lt" id="js_left">
+
+
+        <!--    <div id="tabs" style="padding: 0;border: 0; ">
+                <ul style="border-width:0 0 1px 0;    border-radius:0;  ">
+                    <li ><a href="#tabs-1">组件t</a></li>
+                    <li><a href="#tabs-2">提示</a></li>
+
+                </ul>
+                <div id="tabs-1" style="padding: 0;" >-->
+
+        <h3 class="ne-builder-cate-name">通用控件</h3>
+        <ul class="ne-builder-controls clearfix">
+            <li class="ne-builder-controls-item dec-in-m jc-drag-item jc-in-m" data-hook="global" data-on="control"
+                id="js_common_select">
+                <span><i class="fne fne-select"></i>选择列表</span>
+            </li>
+            <li class="ne-builder-controls-item dec-in-m jc-drag-item jc-in-m" data-hook="global" data-on="control"
+                id="js_common_radio">
+                <span><i class="fne fne-radio"></i>单选题</span>
+            </li>
+            <li class="ne-builder-controls-item dec-in-m jc-drag-item jc-in-m" data-hook="global" data-on="control"
+                id="js_common_checkbox">
+                <span><i class="fne fne-checkbox"></i>多选题</span>
+            </li>
+
+            <li class="ne-builder-controls-item dec-in-m jc-drag-item jc-in-m" id="js_common_number" data-hook="global"
+                data-on="control">
+                <span><i class="fne fne-number"></i>分值题</span>
+            </li>
+
+            <li class="ne-builder-controls-item dec-in-m jc-drag-item jc-in-m" id="js_common_raty" data-hook="global"
+                data-on="control">
+                <span><i class="fne fne-raty1"></i>评分题</span>
+            </li>
+
+            <!--
+                        <li class="ne-builder-controls-item dec-in-m jc-drag-item jc-in-m" data-hook="global" data-on="control"
+                            id="js_common_raty">
+                            <span><i class="fne fne-raty1"></i>评分题</span>
+                        </li>-->
+        </ul>
+
+        <!--
+           <div id="tabs-2">
+           </div>
+
+       </div>-->
+
+
+    </div>
+    <!-- 左侧菜单_结束 -->
+
+    <!-- 右侧菜单_开始 -->
+    <div class="ne-builder-menu_rt ova" style="padding-top: 33px;"/>
+    <h3 class="ne-builder-cate-name" style="position: absolute;top: 0;width: 100%;">组件设置</h3>
+    <div class="ne-builder-attrs icheck-wrap" id="js_right" data-hook="attribute">
+
+        <div class="form-group  dec-attr jc-attr jc-message attr-message" style="display: block;">
+            <h4>没有选择编辑项</h4>
+            <ol>
+                <li>「左侧」菜单中「单击」题目，将题目添加到「问卷设置」区域。</li>
+                <li>「单击」设置好的题目在此编辑题目的「属性」。</li>
+            </ol>
+
+        </div>
+
+        <div class="form-group dec-attr jc-attr jc-fname ">
+            <label class="bold" for="js_attr_fname">表单名称</label>
+            <input class="form-control input-sm  " id="js_attr_fname" data-on="attribute" name="fname"
+                   type="text"/>
+        </div>
+
+        <div class="form-group dec-attr jc-attr jc-label">
+            <label class="bold" for="js_attr_label">标题</label>
+
+            <textarea class="form-control input-sm " rows="10" id="js_attr_label" data-on="attribute" name="label"
+                      placeholder="标题不能为空">
+
+                </textarea>
+        </div>
+
+
+        <div class="form-group dec-attr jc-attr jc-value">
+            <label class="bold" for="js_attr_value">默认值</label>
+            <input class="form-control input-sm " id="js_attr_value" data-on="attribute" name="value">
+            </input>
+        </div>
+
+
+        <div class="form-group dec-attr jc-attr jc-raty ">
+            <label class="bold pb5">评分设置</label>
+
+            <div class="ne-builder-valids ">
+
+                <div class="form-group  ">
+                    最大10颗评星，最小2颗评星。
+                </div>
+
+                <div class="form-group w50pre dec-attr jc-attr jc-raty_max" >
+                    <label for="js_valid_min">最大分值</label>
+                    <!-- <input class="form-control input-sm" id="js_valid_min" name="valid[min]" type="text">-->
+
+                    <div class="input-group input-group-sm spinner " data-hook="raty" data-trigger="spinner" id="js_attr_raty_number">
+                        <input class="form-control text-center  "  name="options[number]" type="text"
+                               value="0" data-min="2" data-max="10"/>
+                        <div class="input-group-addon">
+                            <a href="javascript:;" class="spin-up" data-spin="up">
+                                <i class="fa fa-caret-up"></i>
+                            </a>
+                            <a href="javascript:;" class="spin-down" data-spin="down">
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group w50pre dec-attr jc-attr jc-raty_value" >
+                    <label for="js_valid_max">默认分值</label>
+                    <!--  <input class="form-control input-sm" id="js_valid_max" name="valid[max]" type="text">-->
+
+                    <div class="input-group input-group-sm spinner " data-hook="raty" data-trigger="spinner" id="js_attr_raty_score">
+                        <input class="form-control text-center"  name="options[score]" type="text"
+                               value="0" data-min="0" />
+                        <div class="input-group-addon">
+                            <a href="javascript:;" class="spin-up" data-spin="up">
+                                <i class="fa fa-caret-up"></i>
+                            </a>
+                            <a href="javascript:;" class="spin-down" data-spin="down">
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group dec-attr jc-attr jc-option">
+            <label class="bold pb5">选择项</label>
+
+            <div class="ne-builder-valids ">
+
+                <button class="btn btn-xs btn-primary " type="button" data-btn="addOption">
+                    <i class="fa fa-plus"></i> 增加
+                </button>
+                &nbsp;&nbsp;
+                <button class="btn btn-xs btn-primary " type="button" data-btn="editOption">
+                    <i class="fa fa-plus"></i> 批量编辑
+                </button>
+
+
+                <ul class="ne-builder-option" id="js_attr_option">
+                    <!--动态生成-->
+                </ul>
+
+
+            </div>
+        </div>
+
+
+        <div class="form-group dec-attr jc-attr jc-scope">
+            <label class="bold pb5">范围</label>
+
+            <div class="ne-builder-valids ">
+                <div class="form-group dec-attr jc-attr jc-equalto">
+                    <label>输入值与 ？相同</label>
+                    <select class="form-control input-sm ne-form-field " id="js_attr_equalto"
+                            data-on="attribute" name="valid[equalto]">
+                        <option value="">== 请选择元素 ==</option>
+                        <!--动态生成-->
+                    </select>
+                </div>
+
+                <div class="form-group w50pre dec-attr jc-attr jc-minlength">
+                    <label for="js_valid_minlength">最小长度</label>
+                    <!-- <input class="form-control input-sm" id="js_valid_minlength" name="valid[minlength]"
+                            type="text"/>-->
+
+                    <div class="input-group input-group-sm spinner" data-hook="spinner" data-trigger="spinner">
+                        <input class="form-control text-center" id="js_attr_minlength" name=valid[minlength]"
+                               type="text" value="0" data-min="0"/>
+                        <div class="input-group-addon">
+                            <a href="javascript:;" class="spin-up" data-spin="up">
+                                <i class="fa fa-caret-up"></i>
+                            </a>
+                            <a href="javascript:;" class="spin-down" data-spin="down">
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="form-group w50pre dec-attr jc-attr jc-maxlength">
+                    <label for="js_valid_maxlength">最大长度</label>
+
+                    <!-- <input class="form-control input-sm" id="js_valid_maxlength" name="valid[maxlength]"
+                            type="text"/>-->
+
+                    <div class="input-group input-group-sm spinner " data-hook="spinner" data-trigger="spinner">
+                        <input class="form-control text-center  " id="js_attr_maxlength" name="valid[maxlength]"
+                               type="text" value="0" data-min="0"/>
+                        <div class="input-group-addon">
+                            <a href="javascript:;" class="spin-up" data-spin="up">
+                                <i class="fa fa-caret-up"></i>
+                            </a>
+                            <a href="javascript:;" class="spin-down" data-spin="down">
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group w50pre dec-attr jc-attr jc-min">
+                    <label for="js_valid_min">最小值</label>
+                    <!-- <input class="form-control input-sm" id="js_valid_min" name="valid[min]" type="text">-->
+
+                    <div class="input-group input-group-sm spinner " data-hook="spinner" data-trigger="spinner">
+                        <input class="form-control text-center  " id="js_attr_min" name="valid[min]" type="text"
+                               value="0" data-min="0"/>
+                        <div class="input-group-addon">
+                            <a href="javascript:;" class="spin-up" data-spin="up">
+                                <i class="fa fa-caret-up"></i>
+                            </a>
+                            <a href="javascript:;" class="spin-down" data-spin="down">
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="form-group w50pre dec-attr jc-attr jc-max">
+                    <label for="js_valid_max">最大值</label>
+                    <!--  <input class="form-control input-sm" id="js_valid_max" name="valid[max]" type="text">-->
+
+                    <div class="input-group input-group-sm spinner " data-hook="spinner" data-trigger="spinner">
+                        <input class="form-control text-center" id="js_attr_max" name="valid[max]" type="text"
+                               value="0" data-min="0"/>
+                        <div class="input-group-addon">
+                            <a href="javascript:;" class="spin-up" data-spin="up">
+                                <i class="fa fa-caret-up"></i>
+                            </a>
+                            <a href="javascript:;" class="spin-down" data-spin="down">
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+<!-- 右边侧菜单_结束 -->
+
+<!-- 中间显示区域_开始 -->
+<div class="ne-builder-content" id="js_ctontent" data-hook="content">
+    <div class="ne-builder-form-header">
+        <ul class="ne-builder-valid jc-builder-valid">
+        </ul>
+        <h2 class="form-name" id="form" data-on="item" data-wrap="form">问卷名称</h2>
+        <!--<p class="form-desc">从头开始创建您的表单</p>-->
+    </div>
+
+
+    <div class="ne-builder-building" id="js_drop_wrap">
+    </div>
+
+
+</div>
+<!-- 中间显示区域_结束 -->
+
+
+</div>
+
+
+<!--批量编辑弹出层 开始-->
+<div class="" id="js_pop_bulkedit" style="padding: 15px;display: none;height: 100%;">
+    <div style="border-bottom: 1px solid #ccc;"><p style="margin: 0;"><i class=" f16 fa fa-lightbulb-o"></i> 每行内容对应一个选项
+    </p></div>
+    <div style="position: absolute;top: 45px;bottom: 0;left: 15px;right: 15px;">
+        <div style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;">
+            <textarea class="form-control jc-pop-set"
+                      style="width: 100%;height: 100%; position: absolute;top: 0;bottom: 0;left: 0;right: 0;"></textarea>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!--批量编辑弹出层 结束-->
+
+<script src="static/js/ba_nenu.js"></script>
+<script src="static/js/lib/require/2.1.11/require.js"></script>
+<script src="static/js/ba_require.js"></script>
+
+<script>
+    require ( ['views/form/index'] );
+</script>
+
+</body>
+</html>
+
+
+
