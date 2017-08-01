@@ -13,9 +13,9 @@ define ( ['jquery' , 'jqLaytpl'] , function ( $ , l ) {
         ,"static/js/lib/jquery/plugin/raty/2.7.1/jquery.raty.css"
     ];
     var script = [
-        '/static/js/ba_nenu.js' ,
-        '/static/js/lib/require/2.1.11/require.js' ,
-        '/static/js/ba_require.js'
+        'static/js/ba_nenu.js' ,
+        'static/js/lib/require/2.1.11/require.js' ,
+        'static/js/ba_require.js'
     ];
     
     return {
