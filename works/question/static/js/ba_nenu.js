@@ -52,7 +52,7 @@
             BASE     : '/'
             , PAGE   : '/page/'
             , JSON   : '/json/'
-            , STATIC : '/static/'
+            , STATIC : '/works/question/static/'
         };
 
 
