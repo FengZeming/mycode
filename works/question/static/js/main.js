@@ -9,7 +9,7 @@
     var baseUrl = Nenu.CONSTANT.PATH.STATIC;
 
     require.config = {
-        baseUrl : 'static/' ,
+        baseUrl : './static' ,
         map     : {
             '*' : {
                 'css' : requirePath + '/css' ,
