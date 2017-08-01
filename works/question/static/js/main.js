@@ -1,15 +1,14 @@
 
     'use strict';
     
-    var oRequire = window.Nenu.require ,
-        jsPath = 'js/lib' ,
+    var  jsPath = 'js/lib' ,
         requirePath = jsPath + '/require/plugin' ,
         rModulePath = 'js/module';
     
     var baseUrl = Nenu.CONSTANT.PATH.STATIC;
 
-    require.config = {
-        baseUrl : './static' ,
+   var require = {
+        baseUrl : baseUrl ,
         map     : {
             '*' : {
                 'css' : requirePath + '/css' ,
